@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="Rezgo | Tour and Activity Booking">
+  <meta name="author" content="Rezgo">
+  <title>American Riviera Bike Tours and Rentals | Home</title>
+
+  <!-- Local vendor styles (were CDN: Bootstrap 5.2.1, Font Awesome, Google Fonts) -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/fontawesome.min.css" rel="stylesheet">
+  <link href="assets/css/fonts.css" rel="stylesheet">
+  <!-- Rezgo default template stylesheet (vendored, Google-Fonts imports removed) -->
+  <link href="assets/css/rezgo.css?v=14.7.16" rel="stylesheet">
+
+  <!-- Rezgo default template theme (from original inline <style>) -->
+  <style>
+    :root {
+      --transition: 0.3s ease all;
+      --default-box-shadow: rgb(0 0 0 / 12%) 0px 6px 10px;
+      --subtle-gray: rgba(0,0,0,0.03);
+      --header-gray: hsl(210, 0%, 33%);
+      --subheader-gray: hsl(210, 0%, 55%);
+      --hover-text-color: rgba(0,0,0,0.65);
+      --kumbh: 'Kumbh Sans', sans-serif;
+      --rezgo-orange: #ff6a0e;
+      --rezgo-teal: #007F82;
+      --navy-blue: #0D4191;
+      --blue: #003366;
+      --green: #398439;
+      --yellow: #FF9900;
+      --red: #CC0000;
+      --dark-red: #990000;
+    }
+    body { font-family: var(--kumbh); margin-top: 100px; }
+    .container { width: auto; padding: 5px 15px; }
+    #rezgo-default-header { box-shadow: var(--default-box-shadow); padding: 3px 0 0px; }
+    .navbar-header { display: flex; align-items: center; }
+    .navbar-expand-lg .navbar-collapse { flex-basis: 100%; }
+    #rezgo-default-header .rezgo-default-brand {
+      font-size: 24px; font-weight: 600; color: #333; white-space: nowrap;
+      overflow: hidden; transition: var(--transition); padding: 15px 0;
+      overflow-x: hidden; width: 80%;
+    }
+    .navbar-company-logo { height: auto; padding: 0; }
+    .navbar-toggle { margin-left: auto; }
+    .company-logo-img { width: 100%; height: auto; object-fit: contain; max-width: 130px; aspect-ratio: 2 / 1; }
+    #rezgo-default-header .rezgo-default-brand:hover { opacity: 0.70; }
+    .rezgo-default-list-items { font-size: 15px; font-weight: 600; padding: 5px 15px 5px 0; }
+    .rezgo-default-wrapper { max-width:1170px; margin:0 auto; }
+    footer {
+      padding: 15px 0 5px; background-color: #f5f5f5;
+      border-top: 1px solid #e7e7e7; border-bottom: 1px solid #e7e7e7; font-size: 14px;
+    }
+    .rezgo-footer-brand, .rezgo-footer-brand a {
+      font-weight: 600; color: #333; transition: var(--transition); text-decoration: none;
+    }
+    .rezgo-footer-brand a:hover { opacity: 0.70; text-decoration: none; }
+    .rezgo-default-footer-copyright { font-size: 20px; margin-right: 3px; }
+    .rezgo-default-footer-separator {
+      display: inline-block; font-size: 20px; margin: 0 10px; color: #555;
+      transform: scale(1.4); transform-origin: center;
+    }
+    @media (min-width: 768px){
+      .rezgo-default-wrapper { display: flex; align-items: center; }
+      .navbar-collapse { margin-left: auto!important; }
+    }
+    @media (min-width: 768px){
+      .navbar>.container .navbar-brand { margin-left: 0; }
+    }
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+      #rezgo-default-header .rezgo-default-brand { text-overflow: ellipsis; width: 70%; font-size: 20px; }
+    }
+  </style>
+  <style>
+    /* Change button label of 'more detail' on list page */
+    .rezgo-btn-detail span { display:none; }
+    .rezgo-btn-detail:after { content: 'Book Now'; }
+  </style>
+</head>
+<body>
+    <!-- Start: HEADER -->
+    <header>
+      <nav id="rezgo-default-header" class="navbar navbar-expand-lg bg-light fixed-top" role="navigation">
+        <div class="container-md rezgo-default-wrapper">
+          <a class="navbar-brand rezgo-default-brand" href="index.html">American Riviera Bike Tours and Rentals</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarToggle" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right ms-auto mb-lg-0">
+              <li class="rezgo-default-list-items nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End: HEADER -->
+
+    <!-- Start: REZGO (was an iframe on the original site; content inlined for the local rebuild) -->
+    <div class="rezgo-default-wrapper">
+<div id="rezgo-index-wrp" class="container-fluid rezgo-container" role="main">
+  <div class="row">
+	  
+<div class="col-12 top-bar-order">
+	<div class="left-flex-wrap">
+			<div id="rezgo-tourlist-promo" class="rezgo-tourlist-promo-container ">
+				<a id="rezgo-tourlist-promo-toggle" onclick="$('.rezgo-tourlist-promo').slideToggle(200); $(this).find('.fa-chevron-down').toggleClass('active'); return false;" style=""> 
+					<span>
+						<i class="fas fa-tags"></i><span>&nbsp;</span>
+						Promo Code<span>&nbsp;</span><i class="fas fa-chevron-down "></i>
+					</span>
+				</a>
+				<div class="rezgo-tourlist-promo " style="display:none;">
+					<div>
+													<form class="form-inline" id="rezgo-promo-form" role="form">
+								<input type="text" class="form-control" id="rezgo-promo-code" name="promo" placeholder="Enter Promo Code" value="" required="">
+								<div class="input-group-btn">
+									<span class="btn-check"></span>
+									<button class="btn rezgo-btn-default" type="submit">
+										<span>Apply</span>
+									</button>
+								</div>
+							
+							</form>
+											</div>
+				</div>
+			</div>
+			
+			</div> <!-- left-flex-wrap -->
+	<div class="right-flex-wrap">
+					<div id="rezgo-gift-link-use">
+				<a class="rezgo-gift-link" href="https://riviera.rezgo.com/gift-card" target="_parent">
+					<i class="fas fa-gift fa-lg"></i><span>&nbsp;Gift Card</span>
+				</a>
+			</div>
+			</div> <!-- right-flex-wrap -->
+</div> <!-- top-bar-order -->
+	<div class="rezgo-list-view-container">
+		<section class="col-12" id="rezgo-list-content" aria-labelledby="rezgo-tour-list"><div class="rezgo-ajax-container" id="rezgo-ajax-container-1" style="display: block;">
+					<br>
+	
+	
+		
+			
+		<div class="rezgo-list-item" id="rezgo-item-364051" role="document" tabindex="0">
+			<div class="row rezgo-tour">
+				<div class="col-12">
+					<div class="row">
+							<div class="rezgo-tour-list col-12 float-start">
+																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
+										<a href="https://riviera.rezgo.com/details/364051/private-guided-tour-of-santa-barbara-on-electric-bikes" target="_parent">
+											<img src="assets/img/tours/private-guided-tour-santa-barbara.jpg" border="0" alt="Private Guided Tour of Santa Barbara on Electric Bikes">
+										</a>
+										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
+									</div>
+								<h2><a href="https://riviera.rezgo.com/details/364051/private-guided-tour-of-santa-barbara-on-electric-bikes" target="_parent">Private Guided Tour of Santa Barbara on Electric Bikes</a>&nbsp;
+									<span class="rezgo-list-star-rating"></span>
+								</h2>
+																	<p>
+										$90/person. See and learn about the top ~15 sights. 2.5-3.0 hours. Starts at 10am or 2pm.									</p>
+								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
+									
+																			<p class="rezgo-list-price">
+											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
+										<span class="rezgo-starting-price"><span>US&nbsp;$90.00</span></span>
+										</p>
+																	</article>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
+								<span class="btn-check"></span>
+								<a role="button" href="https://riviera.rezgo.com/details/364051/private-guided-tour-of-santa-barbara-on-electric-bikes" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+				</div><!-- // .row -->
+			</div><!-- // .rezgo-tour -->
+		</div><!-- // .rezgo-list-item -->
+		
+			
+		<div class="rezgo-list-item" id="rezgo-item-403888" role="document" tabindex="0">
+			<div class="row rezgo-tour">
+				<div class="col-12">
+					<div class="row">
+							<div class="rezgo-tour-list col-12 float-start">
+																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
+										<a href="https://riviera.rezgo.com/details/403888/taco-tour" target="_parent">
+											<img src="assets/img/tours/taco-tour.jpg" border="0" alt="Taco Tour">
+										</a>
+										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
+									</div>
+								<h2><a href="https://riviera.rezgo.com/details/403888/taco-tour" target="_parent">Taco Tour</a>&nbsp;
+									<span class="rezgo-list-star-rating"></span>
+								</h2>
+																	<p>
+										$80/person. We ride e-bikes to 3 taquerias. Includes 3 tacos and 1 beer/wine/soda									</p>
+								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
+									
+																			<p class="rezgo-list-price">
+											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
+										<span class="rezgo-starting-price"><span>US&nbsp;$80.00</span></span>
+										</p>
+																	</article>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
+								<span class="btn-check"></span>
+								<a role="button" href="https://riviera.rezgo.com/details/403888/taco-tour" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+				</div><!-- // .row -->
+			</div><!-- // .rezgo-tour -->
+		</div><!-- // .rezgo-list-item -->
+		
+			
+		<div class="rezgo-list-item" id="rezgo-item-364054" role="document" tabindex="0">
+			<div class="row rezgo-tour">
+				<div class="col-12">
+					<div class="row">
+							<div class="rezgo-tour-list col-12 float-start">
+																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
+										<a href="https://riviera.rezgo.com/details/364054/cruiser-e-bike-rental" target="_parent">
+											<img src="assets/img/tours/cruiser-ebike-rental.jpg" border="0" alt="Cruiser e-bike rental">
+										</a>
+										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
+									</div>
+								<h2><a href="https://riviera.rezgo.com/details/364054/cruiser-e-bike-rental" target="_parent">Cruiser e-bike rental</a>&nbsp;
+									<span class="rezgo-list-star-rating"></span>
+								</h2>
+																	<p>
+										Examples: 1 hr for $18, all-day or 24 hrs for $70. Priority eCoast has pedal assist &amp; throttle. Fits riders 5'-6" to 6'-4"									</p>
+								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
+									
+																			<p class="rezgo-list-price">
+											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
+										<span class="rezgo-starting-price"><span>US&nbsp;$18.00</span></span>
+										</p>
+																	</article>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
+								<span class="btn-check"></span>
+								<a role="button" href="https://riviera.rezgo.com/details/364054/cruiser-e-bike-rental" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+				</div><!-- // .row -->
+			</div><!-- // .rezgo-tour -->
+		</div><!-- // .rezgo-list-item -->
+		
+			
+		<div class="rezgo-list-item" id="rezgo-item-364604" role="document" tabindex="0">
+			<div class="row rezgo-tour">
+				<div class="col-12">
+					<div class="row">
+							<div class="rezgo-tour-list col-12 float-start">
+																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
+										<a href="https://riviera.rezgo.com/details/364604/low-step-cruiser-e-bike-rental" target="_parent">
+											<img src="assets/img/tours/low-step-cruiser-ebike-rental.jpg" border="0" alt="Low-step Cruiser e-bike rental">
+										</a>
+										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
+									</div>
+								<h2><a href="https://riviera.rezgo.com/details/364604/low-step-cruiser-e-bike-rental" target="_parent">Low-step Cruiser e-bike rental</a>&nbsp;
+									<span class="rezgo-list-star-rating"></span>
+								</h2>
+																	<p>
+										Examples: 1 hr for $18, all-day or 24 hrs for $70. Electra Cruiser Go! has pedal assist only (no throttle). Fits riders 5'-0" to 6'-0"									</p>
+								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
+									
+																			<p class="rezgo-list-price">
+											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
+										<span class="rezgo-starting-price"><span>US&nbsp;$18.00</span></span>
+										</p>
+																	</article>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
+								<span class="btn-check"></span>
+								<a role="button" href="https://riviera.rezgo.com/details/364604/low-step-cruiser-e-bike-rental" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+				</div><!-- // .row -->
+			</div><!-- // .rezgo-tour -->
+		</div><!-- // .rezgo-list-item -->
+		
+			
+		<div class="rezgo-list-item" id="rezgo-item-405838" role="document" tabindex="0">
+			<div class="row rezgo-tour">
+				<div class="col-12">
+					<div class="row">
+							<div class="rezgo-tour-list col-12 float-start">
+																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
+										<a href="https://riviera.rezgo.com/details/405838/low-step-e-bike-rental" target="_parent">
+											<img src="assets/img/tours/low-step-ebike-rental.jpg" border="0" alt="Low-step e-bike rental">
+										</a>
+										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
+									</div>
+								<h2><a href="https://riviera.rezgo.com/details/405838/low-step-e-bike-rental" target="_parent">Low-step e-bike rental</a>&nbsp;
+									<span class="rezgo-list-star-rating"></span>
+								</h2>
+																	<p>
+										Examples: 1 hr for $18, all-day or 24 hrs for $70. Velotric Breeze is easy low-stepover and has pedal assist and throttle. Fits riders 4'-11" to 5'-11"									</p>
+								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
+									
+																			<p class="rezgo-list-price">
+											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
+										<span class="rezgo-starting-price"><span>US&nbsp;$18.00</span></span>
+										</p>
+																	</article>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
+								<span class="btn-check"></span>
+								<a role="button" href="https://riviera.rezgo.com/details/405838/low-step-e-bike-rental" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+				</div><!-- // .row -->
+			</div><!-- // .rezgo-tour -->
+		</div><!-- // .rezgo-list-item -->
+		
+			
+		<div class="rezgo-list-item" id="rezgo-item-364116" role="document" tabindex="0">
+			<div class="row rezgo-tour">
+				<div class="col-12">
+					<div class="row">
+							<div class="rezgo-tour-list col-12 float-start">
+																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
+										<a href="https://riviera.rezgo.com/details/364116/cargo-e-bike-rental" target="_parent">
+											<img src="assets/img/tours/cargo-ebike-rental.jpg" border="0" alt="Cargo e-bike rental">
+										</a>
+										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
+									</div>
+								<h2><a href="https://riviera.rezgo.com/details/364116/cargo-e-bike-rental" target="_parent">Cargo e-bike rental</a>&nbsp;
+									<span class="rezgo-list-star-rating"></span>
+								</h2>
+																	<p>
+										Examples: 1 hr for $18, all-day or 24 hrs for $70. The Aventon Abound can carry 2 small children or 1 small adult. The Velotric GoMad is shorter and can carry 1 passenger on back.									</p>
+								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
+									
+																			<p class="rezgo-list-price">
+											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
+										<span class="rezgo-starting-price"><span>US&nbsp;$18.00</span></span>
+										</p>
+																	</article>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
+								<span class="btn-check"></span>
+								<a role="button" href="https://riviera.rezgo.com/details/364116/cargo-e-bike-rental" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+				</div><!-- // .row -->
+			</div><!-- // .rezgo-tour -->
+		</div><!-- // .rezgo-list-item -->
+		
+			
+		<div class="rezgo-list-item" id="rezgo-item-410020" role="document" tabindex="0">
+			<div class="row rezgo-tour">
+				<div class="col-12">
+					<div class="row">
+							<div class="rezgo-tour-list col-12 float-start">
+																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
+										<a href="https://riviera.rezgo.com/details/410020/electric-scooter-rental" target="_parent">
+											<img src="assets/img/tours/electric-scooter-rental.jpg" border="0" alt="Electric Scooter rental">
+										</a>
+										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
+									</div>
+								<h2><a href="https://riviera.rezgo.com/details/410020/electric-scooter-rental" target="_parent">Electric Scooter rental</a>&nbsp;
+									<span class="rezgo-list-star-rating"></span>
+								</h2>
+																	<p>
+										Examples: 1 hr for $18, all-day or 24 hrs for $70. Segway E3 Pro has 10-20 miles range, 18mph max., suspension and 10 inch air-filled tires. Weighs 40 pounds. Lights and blinkers. max rider weight												…  <a class="underline-link" href="https://riviera.rezgo.com/details/410020/electric-scooter-rental" target="_parent">read more</a>
+																				</p>
+								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
+									
+																			<p class="rezgo-list-price">
+											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
+										<span class="rezgo-starting-price"><span>US&nbsp;$9.00</span></span>
+										</p>
+																	</article>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
+								<span class="btn-check"></span>
+								<a role="button" href="https://riviera.rezgo.com/details/410020/electric-scooter-rental" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+				</div><!-- // .row -->
+			</div><!-- // .rezgo-tour -->
+		</div><!-- // .rezgo-list-item -->
+		
+			
+		<div class="rezgo-list-item" id="rezgo-item-408925" role="document" tabindex="0">
+			<div class="row rezgo-tour">
+				<div class="col-12">
+					<div class="row">
+							<div class="rezgo-tour-list col-12 float-start">
+																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
+										<a href="https://riviera.rezgo.com/details/408925/city-bike-rental-3-speed-non-electric" target="_parent">
+											<img src="assets/img/tours/city-bike-rental-3-speed.jpg" border="0" alt="City bike rental (3 speed, non - electric)">
+										</a>
+										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
+									</div>
+								<h2><a href="https://riviera.rezgo.com/details/408925/city-bike-rental-3-speed-non-electric" target="_parent">City bike rental (3 speed, non - electric)</a>&nbsp;
+									<span class="rezgo-list-star-rating"></span>
+								</h2>
+																	<p>
+										Examples: 1 hr for $9, all-day or 24 hrs for $33. It has 3 speeds, fits 5'-8" to 6'-1". Hand brakes. Belt drive									</p>
+								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
+									
+																			<p class="rezgo-list-price">
+											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
+										<span class="rezgo-starting-price"><span>US&nbsp;$9.00</span></span>
+										</p>
+																	</article>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
+								<span class="btn-check"></span>
+								<a role="button" href="https://riviera.rezgo.com/details/408925/city-bike-rental-3-speed-non-electric" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+				</div><!-- // .row -->
+			</div><!-- // .rezgo-tour -->
+		</div><!-- // .rezgo-list-item -->
+		
+			
+		<div class="rezgo-list-item" id="rezgo-item-364122" role="document" tabindex="0">
+			<div class="row rezgo-tour">
+				<div class="col-12">
+					<div class="row">
+							<div class="rezgo-tour-list col-12 float-start">
+																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
+										<a href="https://riviera.rezgo.com/details/364122/cruiser-rental-non-electric" target="_parent">
+											<img src="assets/img/tours/cruiser-rental-non-electric.jpg" border="0" alt="Cruiser rental (non - electric)">
+										</a>
+										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
+									</div>
+								<h2><a href="https://riviera.rezgo.com/details/364122/cruiser-rental-non-electric" target="_parent">Cruiser rental (non - electric)</a>&nbsp;
+									<span class="rezgo-list-star-rating"></span>
+								</h2>
+																	<p>
+										Examples: 1 hr for $9, all-day or 24 hrs for $33. It has 3 speed, coaster brakes (i.e. pedal backwards) and fits 5'-5" to 6'-3"									</p>
+								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
+									
+																			<p class="rezgo-list-price">
+											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
+										<span class="rezgo-starting-price"><span>US&nbsp;$9.00</span></span>
+										</p>
+																	</article>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
+								<span class="btn-check"></span>
+								<a role="button" href="https://riviera.rezgo.com/details/364122/cruiser-rental-non-electric" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+				</div><!-- // .row -->
+			</div><!-- // .rezgo-tour -->
+		</div><!-- // .rezgo-list-item -->
+		
+			
+		<div class="rezgo-list-item" id="rezgo-item-364100" role="document" tabindex="0">
+			<div class="row rezgo-tour">
+				<div class="col-12">
+					<div class="row">
+							<div class="rezgo-tour-list col-12 float-start">
+																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
+										<a href="https://riviera.rezgo.com/details/364100/hybridcity-bike-rental-non-electric" target="_parent">
+											<img src="assets/img/tours/hybrid-city-bike-rental-non-electric.jpg" border="0" alt="Hybrid/city bike rental (non-electric)">
+										</a>
+										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
+									</div>
+								<h2><a href="https://riviera.rezgo.com/details/364100/hybridcity-bike-rental-non-electric" target="_parent">Hybrid/city bike rental (non-electric)</a>&nbsp;
+									<span class="rezgo-list-star-rating"></span>
+								</h2>
+																	<p>
+										Examples: 1 hr for $9, all-day or 24 hrs for $33. Trek FX-3 has 10 gears. Medium fits 5'-5" to 5'-9". Large fits 5'-9" to 6'-1"									</p>
+								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
+									
+																			<p class="rezgo-list-price">
+											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
+										<span class="rezgo-starting-price"><span>US&nbsp;$9.00</span></span>
+										</p>
+																	</article>
+							</div>
+							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
+								<span class="btn-check"></span>
+								<a role="button" href="https://riviera.rezgo.com/details/364100/hybridcity-bike-rental-non-electric" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+				</div><!-- // .row -->
+			</div><!-- // .rezgo-tour -->
+		</div><!-- // .rezgo-list-item -->
+		
+	
+</div>
+</section>
+		<div class="col-12" id="rezgo-list-content-footer"></div>
+		<div class="col-12" id="rezgo-list-content-more">
+			<button type="button" class="btn btn-default btn-lg btn-block" id="rezgo-index-more-button" data-rezgo-page="1">
+				<span><i class="fas fa-list" style="margin-right: 15px;"></i>Load more items </span>
+				<!-- <span> More Items &hellip;</span> -->
+			</button>
+		</div>
+		<div class="col-12" id="rezgo-list-content-bottom">&nbsp;</div>
+	</div><!-- // .rezgo-list-container -->
+</div><!-- // .rezgo-container -->
+ 
+<div class="container-fluid">
+	<div id="rezgo-seal-refid-container">
+		 
+			</div>
+			<div style="float:right;height:auto;margin:10px;display:table;">
+			<div style="display:table-cell;vertical-align:bottom;">
+				<div style="font-size:24px;">
+					<a href="http://www.rezgo.com/features/online-booking/" title="Powering Tour and Activity Businesses Worldwide" style="color:#333;text-decoration:none;" target="_blank">
+						<span style="display:inline-block;width:65px;height:65px;text-indent:-9999px;margin-left:4px;background:url(assets/img/rezgo-logo.svg) no-repeat; background-size:contain;">Rezgo</span>
+					</a>
+				</div>
+			</div>
+		</div>
+</div>
+</div><div style="clear: both; display: block; height: 0px;"></div>
+    </div>
+    <!-- End: REZGO -->
+
+    <!-- Start: FOOTER -->
+    <footer>
+      <div class="container rezgo-default-wrapper">
+        <p class="rezgo-footer-brand"> <span class="rezgo-default-footer-copyright">&copy;</span> American Riviera Bike Tours and Rentals 2026 <span class="rezgo-default-footer-separator">&middot;</span><a href="terms.html">Terms &amp; Conditions</a></p>
+      </div>
+    </footer>
+    <!-- End: FOOTER -->
+
+  <!-- Local vendor scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
