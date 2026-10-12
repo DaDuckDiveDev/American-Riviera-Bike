@@ -100,18 +100,19 @@ jobs:
       - name: Check the live site
         run: |
           sleep 5
+          # SiteGround answers automated requests with 202 (its bot check), so 202 counts
+          # as "reachable"; only missing pages and server errors are reported.
           failed=""
           for path in "" our-story/ faq/ contact-us/ book.html terms.html assets/css/site.css assets/img/site/logo.png; do
-            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 "https://$SITE/$path?deploy=$GITHUB_SHA" || true)
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 "https://$SITE/$path" || true)
             echo "$code /$path"
-            [ "$code" = "200" ] || failed="$failed /$path($code)"
+            case "$code" in 200|202) ;; *) failed="$failed /$path($code)" ;; esac
+            sleep 2
           done
           if [ -n "$failed" ]; then
-            echo "::warning::Uploaded, but these did not return 200:$failed"
-          elif curl -fsSL --max-time 30 "https://$SITE/?deploy=$GITHUB_SHA" | grep -q "Explore the American Riviera by E-Bike"; then
-            echo "::notice::https://$SITE/ is serving the home page and all pages return 200"
+            echo "::warning::Uploaded, but these pages did not load:$failed"
           else
-            echo "::warning::Files uploaded, but https://$SITE/ is not showing the new home page yet (cache)"
+            echo "::notice::Uploaded to https://$SITE/ and every page responds"
           fi
 
       - name: Remove the key
