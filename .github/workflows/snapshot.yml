@@ -1,0 +1,19 @@
+name: Snapshot source site
+on:
+  push:
+    branches: [snapshot]
+    paths: [tools/snapshot.py, .github/workflows/snapshot.yml]
+permissions:
+  contents: write
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/snapshot.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add snap
+          git commit -q -m "Snapshot of source pages and assets"
+          git push origin HEAD:snapshot
