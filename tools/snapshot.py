@@ -4,7 +4,11 @@ import os, re, sys, urllib.request, urllib.parse
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
 SITE = "https://biketoursofsb.com"
-PAGES = {"home": "/", "our-story": "/our-story/", "faq": "/faq/", "contact-us": "/contact-us/"}
+PAGES = {"home": "/", "our-story": "/our-story/", "faq": "/faq/", "contact-us": "/contact-us/",
+         "available-bikes": "/available-bikes/",
+         "choosing-a-bike": "/choosing-a-bike-for-your-bike-tour-of-santa-barbara/",
+         "getting-the-most": "/how-to-get-the-most-out-of-your-bike-tour-of-santa-barbara/",
+         "ways-to-tour": "/ways-to-tour-santa-barbra-on-bike/"}
 EXT = (".css", ".png", ".jpg", ".jpeg", ".webp", ".svg", ".gif", ".woff", ".woff2", ".ttf", ".avif", ".ico")
 OUT = "snap"
 seen, failed = {}, []
@@ -62,6 +66,11 @@ def refs(html):
     return found
 
 def main():
+    for sm in ("/robots.txt", "/sitemap_index.xml", "/wp-sitemap.xml", "/page-sitemap.xml", "/post-sitemap.xml"):
+        try:
+            save(os.path.join(OUT, "meta", sm.strip("/")), get(SITE + sm))
+        except Exception as e:
+            failed.append(f"{SITE + sm} :: {e}")
     for name, path in PAGES.items():
         try:
             data = get(SITE + path)
