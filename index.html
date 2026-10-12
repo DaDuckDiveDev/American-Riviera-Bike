@@ -1,541 +1,398 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
-  <meta name="description" content="Rezgo | Tour and Activity Booking">
-  <meta name="author" content="Rezgo">
-  <title>American Riviera Bike Tours and Rentals | Home</title>
-
-  <!-- Local vendor styles (were CDN: Bootstrap 5.2.1, Font Awesome, Google Fonts) -->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/fontawesome.min.css" rel="stylesheet">
-  <link href="assets/css/fonts.css" rel="stylesheet">
-  <!-- Rezgo default template stylesheet (vendored, Google-Fonts imports removed) -->
-  <link href="assets/css/rezgo.css?v=14.7.16" rel="stylesheet">
-
-  <!-- Rezgo default template theme (from original inline <style>) -->
-  <style>
-    :root {
-      --transition: 0.3s ease all;
-      --default-box-shadow: rgb(0 0 0 / 12%) 0px 6px 10px;
-      --subtle-gray: rgba(0,0,0,0.03);
-      --header-gray: hsl(210, 0%, 33%);
-      --subheader-gray: hsl(210, 0%, 55%);
-      --hover-text-color: rgba(0,0,0,0.65);
-      --kumbh: 'Kumbh Sans', sans-serif;
-      --rezgo-orange: #ff6a0e;
-      --rezgo-teal: #007F82;
-      --navy-blue: #0D4191;
-      --blue: #003366;
-      --green: #398439;
-      --yellow: #FF9900;
-      --red: #CC0000;
-      --dark-red: #990000;
-    }
-    body { font-family: var(--kumbh); margin-top: 100px; }
-    .container { width: auto; padding: 5px 15px; }
-    #rezgo-default-header { box-shadow: var(--default-box-shadow); padding: 3px 0 0px; }
-    .navbar-header { display: flex; align-items: center; }
-    .navbar-expand-lg .navbar-collapse { flex-basis: 100%; }
-    #rezgo-default-header .rezgo-default-brand {
-      font-size: 24px; font-weight: 600; color: #333; white-space: nowrap;
-      overflow: hidden; transition: var(--transition); padding: 15px 0;
-      overflow-x: hidden; width: 80%;
-    }
-    .navbar-company-logo { height: auto; padding: 0; }
-    .navbar-toggle { margin-left: auto; }
-    .company-logo-img { width: 100%; height: auto; object-fit: contain; max-width: 130px; aspect-ratio: 2 / 1; }
-    #rezgo-default-header .rezgo-default-brand:hover { opacity: 0.70; }
-    .rezgo-default-list-items { font-size: 15px; font-weight: 600; padding: 5px 15px 5px 0; }
-    .rezgo-default-wrapper { max-width:1170px; margin:0 auto; }
-    footer {
-      padding: 15px 0 5px; background-color: #f5f5f5;
-      border-top: 1px solid #e7e7e7; border-bottom: 1px solid #e7e7e7; font-size: 14px;
-    }
-    .rezgo-footer-brand, .rezgo-footer-brand a {
-      font-weight: 600; color: #333; transition: var(--transition); text-decoration: none;
-    }
-    .rezgo-footer-brand a:hover { opacity: 0.70; text-decoration: none; }
-    .rezgo-default-footer-copyright { font-size: 20px; margin-right: 3px; }
-    .rezgo-default-footer-separator {
-      display: inline-block; font-size: 20px; margin: 0 10px; color: #555;
-      transform: scale(1.4); transform-origin: center;
-    }
-    @media (min-width: 768px){
-      .rezgo-default-wrapper { display: flex; align-items: center; }
-      .navbar-collapse { margin-left: auto!important; }
-    }
-    @media (min-width: 768px){
-      .navbar>.container .navbar-brand { margin-left: 0; }
-    }
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-      #rezgo-default-header .rezgo-default-brand { text-overflow: ellipsis; width: 70%; font-size: 20px; }
-    }
-  </style>
-  <style>
-    /* Change button label of 'more detail' on list page */
-    .rezgo-btn-detail span { display:none; }
-    .rezgo-btn-detail:after { content: 'Book Now'; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Santa Barbara E-Bike Tours &amp; Rentals | American Riviera</title>
+  <meta name="description" content="E-bike rentals &amp; private guided bike tours in Santa Barbara&#x27;s Funk Zone, 3 min from Stearns Wharf. Rated 5.0. Lowest price guaranteed.">
+  <link rel="canonical" href="https://biketoursofsb.com/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Santa Barbara E-Bike Tours &amp; Rentals | American Riviera">
+  <meta property="og:description" content="E-bike rentals &amp; private guided bike tours in Santa Barbara&#x27;s Funk Zone, 3 min from Stearns Wharf. Rated 5.0. Lowest price guaranteed.">
+  <meta property="og:url" content="https://biketoursofsb.com/">
+  <meta property="og:site_name" content="American Riviera Bike Tours and Rentals">
+  <meta property="og:image" content="https://biketoursofsb.com/assets/img/site/sights/dolphin-fountain.jpg">
+  <link rel="icon" href="assets/img/site/favicon-32.png" sizes="32x32">
+  <link rel="icon" href="assets/img/site/favicon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/img/site/favicon-180.png">
+  <link rel="preload" href="assets/fonts/montserrat-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link href="assets/css/chrome.css" rel="stylesheet">
+  <link href="assets/css/site.css" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/site/hero-riders.jpg">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://biketoursofsb.com/#business", "name": "American Riviera Bike Tours and Rentals", "image": "https://biketoursofsb.com/assets/img/site/logo.png", "url": "https://biketoursofsb.com", "telephone": "+1-805-622-7766", "priceRange": "$9-$90", "address": {"@type": "PostalAddress", "streetAddress": "122 Gray Ave", "addressLocality": "Santa Barbara", "addressRegion": "CA", "postalCode": "93101", "addressCountry": "US"}, "geo": {"@type": "GeoCoordinates", "latitude": 34.414, "longitude": -119.6875}, "areaServed": {"@type": "City", "name": "Santa Barbara", "sameAs": "https://en.wikipedia.org/wiki/Santa_Barbara,_California"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "10:00", "closes": "18:00"}], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "390", "bestRating": "5"}, "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Bike Rentals and Tours", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "E-Bike Full Day Rental", "serviceType": "Bike rental"}, "price": "70.00", "priceCurrency": "USD", "description": "Full day e-bike cruiser rental. Lowest price in Santa Barbara - guaranteed."}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "E-Bike Hourly Rental", "serviceType": "Bike rental"}, "price": "18.00", "priceCurrency": "USD", "description": "Hourly e-bike rental starting at $18/hour. Includes helmet and lock."}, {"@type": "Offer", "itemOffered": {"@type": "TouristTrip", "name": "Guided City E-Bike Tour", "touristType": "Couples, Families, Solo Travelers"}, "price": "90.00", "priceCurrency": "USD", "description": "2.5 hour private guided e-bike tour of Santa Barbara. Includes e-bike, helmet, water, and local guide."}, {"@type": "Offer", "itemOffered": {"@type": "TouristTrip", "name": "Guided Taco Tour", "touristType": "Food Lovers"}, "price": "80.00", "priceCurrency": "USD", "description": "1.5 hour guided e-bike taco tour visiting 3 local taquerias. Includes free beer or soda."}]}, "sameAs": ["https://www.instagram.com/americanrivierabiking", "https://www.youtube.com/@AmericanRivieraBiking", "https://www.yelp.com/biz/american-riviera-bike-tours-and-rentals-santa-barbara", "https://www.tripadvisor.com/Attraction_Review-g33045-d27188797-Reviews-American_Riviera_E_Bike_Tours_and_Rentals-Santa_Barbara_California.html"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I need biking experience to ride an e-bike in Santa Barbara?", "acceptedAnswer": {"@type": "Answer", "text": "Not at all. If you can ride a regular bike, you can ride an e-bike. The pedal-assist makes hills feel flat, and we give every rider a short orientation before any tour or rental, so first-timers feel confident within minutes of rolling out."}}, {"@type": "Question", "name": "Do I need a license to ride an e-bike in California?", "acceptedAnswer": {"@type": "Answer", "text": "No. California requires no license, registration, or insurance for Class 1 e-bikes like ours. If you can ride a regular bike, you can ride one of ours. We give every rider a quick orientation before heading out, so beginners feel comfortable right away."}}, {"@type": "Question", "name": "How old do you have to be to rent an e-bike?", "acceptedAnswer": {"@type": "Answer", "text": "Kids ride free in the seat of our cargo e-bike, so families can tour together. For solo riders we'll fit you properly and make sure you're comfortable before heading out. Call us at (805) 622-7766 with any questions about younger riders or group bookings."}}, {"@type": "Question", "name": "Can I bring my kids? Do you have child seats or cargo bikes?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Our Aventon Abound cargo e-bike carries two kids or one small adult on the back, so the whole family rides together. We also stock low-step and smaller-frame bikes for shorter riders, and helmets are included free for every rider, kids included."}}, {"@type": "Question", "name": "How fast do the e-bikes go?", "acceptedAnswer": {"@type": "Answer", "text": "Our e-bikes are Class 1, so the pedal-assist helps you up to 20 mph and then eases off — smooth, comfortable power with no throttle. That keeps them legal on Santa Barbara's bike paths and easy for beginners, while still making hills and headwinds effortless."}}, {"@type": "Question", "name": "How far can I go on one e-bike charge?", "acceptedAnswer": {"@type": "Answer", "text": "Our e-bikes comfortably cover 25 to 40+ miles on a single charge, depending on terrain and how much pedal-assist you use. That's far more than a typical day exploring Santa Barbara — from the Funk Zone to Butterfly Beach, the Mission, and back with charge to spare."}}, {"@type": "Question", "name": "How much does it cost to rent an e-bike in Santa Barbara?", "acceptedAnswer": {"@type": "Answer", "text": "E-bike rentals start at $18 per hour or $70 for a full day; regular bikes are $9 per hour or $33 a day, and multi-day rates lower the daily price. Every rental includes a helmet, lock, water, and map — and we guarantee the lowest price in town."}}, {"@type": "Question", "name": "What is the cheapest e-bike rental in Santa Barbara?", "acceptedAnswer": {"@type": "Answer", "text": "We offer the lowest e-bike rental prices in Santa Barbara, starting at $18 per hour and $70 for a full day. As a locally owned shop with no franchise overhead, we guarantee it: find a lower advertised price for a similar bike and we'll beat it by 10%."}}, {"@type": "Question", "name": "Do I need to reserve ahead, or can I walk in?", "acceptedAnswer": {"@type": "Answer", "text": "Walk-ins are welcome when bikes are available, but reserving ahead guarantees your bike and tour time, especially on weekends and holidays. Book online anytime or call Mike at (805) 622-7766. Cancellation is free with 24 hours' notice, so there's no risk in booking early."}}, {"@type": "Question", "name": "How long is the guided city bike tour and what will I see?", "acceptedAnswer": {"@type": "Answer", "text": "The Private Guided City Tour runs about 2.5 hours at a relaxed pace and visits roughly a dozen top sights — the Santa Barbara Mission, Butterfly Beach, Stearns Wharf, the courthouse, and the largest fig tree in America. It's private to your group and led personally by Mike."}}, {"@type": "Question", "name": "Where does the Santa Barbara taco bike tour go?", "acceptedAnswer": {"@type": "Answer", "text": "Our Guided Taco Tour is the only taco-by-bike tour in Santa Barbara. Over 1.5 hours you'll ride e-bikes to three of Mike's favorite local taquerias, sampling tacos at each stop, with a free beer, wine, or soda included. It departs at 12:30 PM from the Funk Zone."}}, {"@type": "Question", "name": "Are e-bikes allowed on the Cabrillo Bike Path?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Class 1 e-bikes like ours are permitted on the Cabrillo Bike Path, the scenic oceanfront route that starts just minutes from our Funk Zone shop. It's the easiest, most beautiful way to ride the waterfront past the harbor, Stearns Wharf, and East Beach."}}, {"@type": "Question", "name": "Where can I rent an e-bike near Stearns Wharf?", "acceptedAnswer": {"@type": "Answer", "text": "We're a 3-minute walk from Stearns Wharf at 122 Gray Ave in the Funk Zone — the closest premium e-bike rentals to the waterfront. Walk up State Street two blocks, turn right on Yanonali, then right on Gray Avenue. Free public parking is nearby."}}, {"@type": "Question", "name": "Is there parking near your shop in the Funk Zone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Free public parking is available within a short walk of our location at 122 Gray Ave. From Stearns Wharf, head up State Street two blocks, turn right on Yanonali Street, then right on Gray Avenue — about a three-minute walk to our door."}}, {"@type": "Question", "name": "What is the best self-guided bike route in Santa Barbara?", "acceptedAnswer": {"@type": "Answer", "text": "Our free 12-mile self-guided route loops the coastline, the Bird Refuge, Butterfly Beach, and historic landmarks, starting right from our Funk Zone shop. Ask in-store for the map or download it from our route guide. Most riders finish comfortably in a half-day on an e-bike."}}, {"@type": "Question", "name": "What is the best way to see Santa Barbara in one day?", "acceptedAnswer": {"@type": "Answer", "text": "By e-bike. In a single day you can ride the Cabrillo waterfront path, stop at Stearns Wharf and the harbor, cruise to Butterfly Beach in Montecito, then loop up to the Mission and downtown State Street — covering far more ground than walking, with no parking hassle."}}]}</script>
 </head>
 <body>
-    <!-- Start: HEADER -->
-    <header>
-      <nav id="rezgo-default-header" class="navbar navbar-expand-lg bg-light fixed-top" role="navigation">
-        <div class="container-md rezgo-default-wrapper">
-          <a class="navbar-brand rezgo-default-brand" href="index.html">American Riviera Bike Tours and Rentals</a>
-          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div id="navbarToggle" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right ms-auto mb-lg-0">
-              <li class="rezgo-default-list-items nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- End: HEADER -->
-
-    <!-- Start: REZGO (was an iframe on the original site; content inlined for the local rebuild) -->
-    <div class="rezgo-default-wrapper">
-<div id="rezgo-index-wrp" class="container-fluid rezgo-container" role="main">
-  <div class="row">
-	  
-<div class="col-12 top-bar-order">
-	<div class="left-flex-wrap">
-			<div id="rezgo-tourlist-promo" class="rezgo-tourlist-promo-container ">
-				<a id="rezgo-tourlist-promo-toggle" onclick="$('.rezgo-tourlist-promo').slideToggle(200); $(this).find('.fa-chevron-down').toggleClass('active'); return false;" style=""> 
-					<span>
-						<i class="fas fa-tags"></i><span>&nbsp;</span>
-						Promo Code<span>&nbsp;</span><i class="fas fa-chevron-down "></i>
-					</span>
-				</a>
-				<div class="rezgo-tourlist-promo " style="display:none;">
-					<div>
-													<form class="form-inline" id="rezgo-promo-form" role="form">
-								<input type="text" class="form-control" id="rezgo-promo-code" name="promo" placeholder="Enter Promo Code" value="" required="">
-								<div class="input-group-btn">
-									<span class="btn-check"></span>
-									<button class="btn rezgo-btn-default" type="submit">
-										<span>Apply</span>
-									</button>
-								</div>
-							
-							</form>
-											</div>
-				</div>
-			</div>
-			
-			</div> <!-- left-flex-wrap -->
-	<div class="right-flex-wrap">
-					<div id="rezgo-gift-link-use">
-				<a class="rezgo-gift-link" href="https://riviera.rezgo.com/gift-card" target="_parent">
-					<i class="fas fa-gift fa-lg"></i><span>&nbsp;Gift Card</span>
-				</a>
-			</div>
-			</div> <!-- right-flex-wrap -->
-</div> <!-- top-bar-order -->
-	<div class="rezgo-list-view-container">
-		<section class="col-12" id="rezgo-list-content" aria-labelledby="rezgo-tour-list"><div class="rezgo-ajax-container" id="rezgo-ajax-container-1" style="display: block;">
-					<br>
-	
-	
-		
-			
-		<div class="rezgo-list-item" id="rezgo-item-364051" role="document" tabindex="0">
-			<div class="row rezgo-tour">
-				<div class="col-12">
-					<div class="row">
-							<div class="rezgo-tour-list col-12 float-start">
-																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
-										<a href="https://riviera.rezgo.com/details/364051/private-guided-tour-of-santa-barbara-on-electric-bikes" target="_parent">
-											<img src="assets/img/tours/private-guided-tour-santa-barbara.jpg" border="0" alt="Private Guided Tour of Santa Barbara on Electric Bikes">
-										</a>
-										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
-									</div>
-								<h2><a href="https://riviera.rezgo.com/details/364051/private-guided-tour-of-santa-barbara-on-electric-bikes" target="_parent">Private Guided Tour of Santa Barbara on Electric Bikes</a>&nbsp;
-									<span class="rezgo-list-star-rating"></span>
-								</h2>
-																	<p>
-										$90/person. See and learn about the top ~15 sights. 2.5-3.0 hours. Starts at 10am or 2pm.									</p>
-								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
-									
-																			<p class="rezgo-list-price">
-											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
-										<span class="rezgo-starting-price"><span>US&nbsp;$90.00</span></span>
-										</p>
-																	</article>
-							</div>
-							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
-								<span class="btn-check"></span>
-								<a role="button" href="https://riviera.rezgo.com/details/364051/private-guided-tour-of-santa-barbara-on-electric-bikes" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-				</div><!-- // .row -->
-			</div><!-- // .rezgo-tour -->
-		</div><!-- // .rezgo-list-item -->
-		
-			
-		<div class="rezgo-list-item" id="rezgo-item-403888" role="document" tabindex="0">
-			<div class="row rezgo-tour">
-				<div class="col-12">
-					<div class="row">
-							<div class="rezgo-tour-list col-12 float-start">
-																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
-										<a href="https://riviera.rezgo.com/details/403888/taco-tour" target="_parent">
-											<img src="assets/img/tours/taco-tour.jpg" border="0" alt="Taco Tour">
-										</a>
-										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
-									</div>
-								<h2><a href="https://riviera.rezgo.com/details/403888/taco-tour" target="_parent">Taco Tour</a>&nbsp;
-									<span class="rezgo-list-star-rating"></span>
-								</h2>
-																	<p>
-										$80/person. We ride e-bikes to 3 taquerias. Includes 3 tacos and 1 beer/wine/soda									</p>
-								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
-									
-																			<p class="rezgo-list-price">
-											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
-										<span class="rezgo-starting-price"><span>US&nbsp;$80.00</span></span>
-										</p>
-																	</article>
-							</div>
-							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
-								<span class="btn-check"></span>
-								<a role="button" href="https://riviera.rezgo.com/details/403888/taco-tour" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-				</div><!-- // .row -->
-			</div><!-- // .rezgo-tour -->
-		</div><!-- // .rezgo-list-item -->
-		
-			
-		<div class="rezgo-list-item" id="rezgo-item-364054" role="document" tabindex="0">
-			<div class="row rezgo-tour">
-				<div class="col-12">
-					<div class="row">
-							<div class="rezgo-tour-list col-12 float-start">
-																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
-										<a href="https://riviera.rezgo.com/details/364054/cruiser-e-bike-rental" target="_parent">
-											<img src="assets/img/tours/cruiser-ebike-rental.jpg" border="0" alt="Cruiser e-bike rental">
-										</a>
-										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
-									</div>
-								<h2><a href="https://riviera.rezgo.com/details/364054/cruiser-e-bike-rental" target="_parent">Cruiser e-bike rental</a>&nbsp;
-									<span class="rezgo-list-star-rating"></span>
-								</h2>
-																	<p>
-										Examples: 1 hr for $18, all-day or 24 hrs for $70. Priority eCoast has pedal assist &amp; throttle. Fits riders 5'-6" to 6'-4"									</p>
-								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
-									
-																			<p class="rezgo-list-price">
-											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
-										<span class="rezgo-starting-price"><span>US&nbsp;$18.00</span></span>
-										</p>
-																	</article>
-							</div>
-							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
-								<span class="btn-check"></span>
-								<a role="button" href="https://riviera.rezgo.com/details/364054/cruiser-e-bike-rental" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-				</div><!-- // .row -->
-			</div><!-- // .rezgo-tour -->
-		</div><!-- // .rezgo-list-item -->
-		
-			
-		<div class="rezgo-list-item" id="rezgo-item-364604" role="document" tabindex="0">
-			<div class="row rezgo-tour">
-				<div class="col-12">
-					<div class="row">
-							<div class="rezgo-tour-list col-12 float-start">
-																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
-										<a href="https://riviera.rezgo.com/details/364604/low-step-cruiser-e-bike-rental" target="_parent">
-											<img src="assets/img/tours/low-step-cruiser-ebike-rental.jpg" border="0" alt="Low-step Cruiser e-bike rental">
-										</a>
-										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
-									</div>
-								<h2><a href="https://riviera.rezgo.com/details/364604/low-step-cruiser-e-bike-rental" target="_parent">Low-step Cruiser e-bike rental</a>&nbsp;
-									<span class="rezgo-list-star-rating"></span>
-								</h2>
-																	<p>
-										Examples: 1 hr for $18, all-day or 24 hrs for $70. Electra Cruiser Go! has pedal assist only (no throttle). Fits riders 5'-0" to 6'-0"									</p>
-								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
-									
-																			<p class="rezgo-list-price">
-											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
-										<span class="rezgo-starting-price"><span>US&nbsp;$18.00</span></span>
-										</p>
-																	</article>
-							</div>
-							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
-								<span class="btn-check"></span>
-								<a role="button" href="https://riviera.rezgo.com/details/364604/low-step-cruiser-e-bike-rental" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-				</div><!-- // .row -->
-			</div><!-- // .rezgo-tour -->
-		</div><!-- // .rezgo-list-item -->
-		
-			
-		<div class="rezgo-list-item" id="rezgo-item-405838" role="document" tabindex="0">
-			<div class="row rezgo-tour">
-				<div class="col-12">
-					<div class="row">
-							<div class="rezgo-tour-list col-12 float-start">
-																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
-										<a href="https://riviera.rezgo.com/details/405838/low-step-e-bike-rental" target="_parent">
-											<img src="assets/img/tours/low-step-ebike-rental.jpg" border="0" alt="Low-step e-bike rental">
-										</a>
-										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
-									</div>
-								<h2><a href="https://riviera.rezgo.com/details/405838/low-step-e-bike-rental" target="_parent">Low-step e-bike rental</a>&nbsp;
-									<span class="rezgo-list-star-rating"></span>
-								</h2>
-																	<p>
-										Examples: 1 hr for $18, all-day or 24 hrs for $70. Velotric Breeze is easy low-stepover and has pedal assist and throttle. Fits riders 4'-11" to 5'-11"									</p>
-								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
-									
-																			<p class="rezgo-list-price">
-											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
-										<span class="rezgo-starting-price"><span>US&nbsp;$18.00</span></span>
-										</p>
-																	</article>
-							</div>
-							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
-								<span class="btn-check"></span>
-								<a role="button" href="https://riviera.rezgo.com/details/405838/low-step-e-bike-rental" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-				</div><!-- // .row -->
-			</div><!-- // .rezgo-tour -->
-		</div><!-- // .rezgo-list-item -->
-		
-			
-		<div class="rezgo-list-item" id="rezgo-item-364116" role="document" tabindex="0">
-			<div class="row rezgo-tour">
-				<div class="col-12">
-					<div class="row">
-							<div class="rezgo-tour-list col-12 float-start">
-																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
-										<a href="https://riviera.rezgo.com/details/364116/cargo-e-bike-rental" target="_parent">
-											<img src="assets/img/tours/cargo-ebike-rental.jpg" border="0" alt="Cargo e-bike rental">
-										</a>
-										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
-									</div>
-								<h2><a href="https://riviera.rezgo.com/details/364116/cargo-e-bike-rental" target="_parent">Cargo e-bike rental</a>&nbsp;
-									<span class="rezgo-list-star-rating"></span>
-								</h2>
-																	<p>
-										Examples: 1 hr for $18, all-day or 24 hrs for $70. The Aventon Abound can carry 2 small children or 1 small adult. The Velotric GoMad is shorter and can carry 1 passenger on back.									</p>
-								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
-									
-																			<p class="rezgo-list-price">
-											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
-										<span class="rezgo-starting-price"><span>US&nbsp;$18.00</span></span>
-										</p>
-																	</article>
-							</div>
-							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
-								<span class="btn-check"></span>
-								<a role="button" href="https://riviera.rezgo.com/details/364116/cargo-e-bike-rental" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-				</div><!-- // .row -->
-			</div><!-- // .rezgo-tour -->
-		</div><!-- // .rezgo-list-item -->
-		
-			
-		<div class="rezgo-list-item" id="rezgo-item-410020" role="document" tabindex="0">
-			<div class="row rezgo-tour">
-				<div class="col-12">
-					<div class="row">
-							<div class="rezgo-tour-list col-12 float-start">
-																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
-										<a href="https://riviera.rezgo.com/details/410020/electric-scooter-rental" target="_parent">
-											<img src="assets/img/tours/electric-scooter-rental.jpg" border="0" alt="Electric Scooter rental">
-										</a>
-										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
-									</div>
-								<h2><a href="https://riviera.rezgo.com/details/410020/electric-scooter-rental" target="_parent">Electric Scooter rental</a>&nbsp;
-									<span class="rezgo-list-star-rating"></span>
-								</h2>
-																	<p>
-										Examples: 1 hr for $18, all-day or 24 hrs for $70. Segway E3 Pro has 10-20 miles range, 18mph max., suspension and 10 inch air-filled tires. Weighs 40 pounds. Lights and blinkers. max rider weight												…  <a class="underline-link" href="https://riviera.rezgo.com/details/410020/electric-scooter-rental" target="_parent">read more</a>
-																				</p>
-								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
-									
-																			<p class="rezgo-list-price">
-											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
-										<span class="rezgo-starting-price"><span>US&nbsp;$9.00</span></span>
-										</p>
-																	</article>
-							</div>
-							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
-								<span class="btn-check"></span>
-								<a role="button" href="https://riviera.rezgo.com/details/410020/electric-scooter-rental" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-				</div><!-- // .row -->
-			</div><!-- // .rezgo-tour -->
-		</div><!-- // .rezgo-list-item -->
-		
-			
-		<div class="rezgo-list-item" id="rezgo-item-408925" role="document" tabindex="0">
-			<div class="row rezgo-tour">
-				<div class="col-12">
-					<div class="row">
-							<div class="rezgo-tour-list col-12 float-start">
-																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
-										<a href="https://riviera.rezgo.com/details/408925/city-bike-rental-3-speed-non-electric" target="_parent">
-											<img src="assets/img/tours/city-bike-rental-3-speed.jpg" border="0" alt="City bike rental (3 speed, non - electric)">
-										</a>
-										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
-									</div>
-								<h2><a href="https://riviera.rezgo.com/details/408925/city-bike-rental-3-speed-non-electric" target="_parent">City bike rental (3 speed, non - electric)</a>&nbsp;
-									<span class="rezgo-list-star-rating"></span>
-								</h2>
-																	<p>
-										Examples: 1 hr for $9, all-day or 24 hrs for $33. It has 3 speeds, fits 5'-8" to 6'-1". Hand brakes. Belt drive									</p>
-								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
-									
-																			<p class="rezgo-list-price">
-											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
-										<span class="rezgo-starting-price"><span>US&nbsp;$9.00</span></span>
-										</p>
-																	</article>
-							</div>
-							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
-								<span class="btn-check"></span>
-								<a role="button" href="https://riviera.rezgo.com/details/408925/city-bike-rental-3-speed-non-electric" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-				</div><!-- // .row -->
-			</div><!-- // .rezgo-tour -->
-		</div><!-- // .rezgo-list-item -->
-		
-			
-		<div class="rezgo-list-item" id="rezgo-item-364122" role="document" tabindex="0">
-			<div class="row rezgo-tour">
-				<div class="col-12">
-					<div class="row">
-							<div class="rezgo-tour-list col-12 float-start">
-																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
-										<a href="https://riviera.rezgo.com/details/364122/cruiser-rental-non-electric" target="_parent">
-											<img src="assets/img/tours/cruiser-rental-non-electric.jpg" border="0" alt="Cruiser rental (non - electric)">
-										</a>
-										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
-									</div>
-								<h2><a href="https://riviera.rezgo.com/details/364122/cruiser-rental-non-electric" target="_parent">Cruiser rental (non - electric)</a>&nbsp;
-									<span class="rezgo-list-star-rating"></span>
-								</h2>
-																	<p>
-										Examples: 1 hr for $9, all-day or 24 hrs for $33. It has 3 speed, coaster brakes (i.e. pedal backwards) and fits 5'-5" to 6'-3"									</p>
-								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
-									
-																			<p class="rezgo-list-price">
-											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
-										<span class="rezgo-starting-price"><span>US&nbsp;$9.00</span></span>
-										</p>
-																	</article>
-							</div>
-							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
-								<span class="btn-check"></span>
-								<a role="button" href="https://riviera.rezgo.com/details/364122/cruiser-rental-non-electric" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-				</div><!-- // .row -->
-			</div><!-- // .rezgo-tour -->
-		</div><!-- // .rezgo-list-item -->
-		
-			
-		<div class="rezgo-list-item" id="rezgo-item-364100" role="document" tabindex="0">
-			<div class="row rezgo-tour">
-				<div class="col-12">
-					<div class="row">
-							<div class="rezgo-tour-list col-12 float-start">
-																	<div class="col-12 col-sm-5 col-md-5 rezgo-list-image float-start">
-										<a href="https://riviera.rezgo.com/details/364100/hybridcity-bike-rental-non-electric" target="_parent">
-											<img src="assets/img/tours/hybrid-city-bike-rental-non-electric.jpg" border="0" alt="Hybrid/city bike rental (non-electric)">
-										</a>
-										<div class="visible-xs visible-sm rezgo-image-spacer"></div>
-									</div>
-								<h2><a href="https://riviera.rezgo.com/details/364100/hybridcity-bike-rental-non-electric" target="_parent">Hybrid/city bike rental (non-electric)</a>&nbsp;
-									<span class="rezgo-list-star-rating"></span>
-								</h2>
-																	<p>
-										Examples: 1 hr for $9, all-day or 24 hrs for $33. Trek FX-3 has 10 gears. Medium fits 5'-5" to 5'-9". Large fits 5'-9" to 6'-1"									</p>
-								<article class="rezgo-info-left col-sm-12 col-md-12 col-lg-4 float-start">
-									
-																			<p class="rezgo-list-price">
-											<strong class="rezgo-starting-label"><span>Starting from</span></strong>
-										<span class="rezgo-starting-price"><span>US&nbsp;$9.00</span></span>
-										</p>
-																	</article>
-							</div>
-							<div class="col-12 col-sm-12 col-md-12 col-lg-3 float-end rezgo-detail">
-								<span class="btn-check"></span>
-								<a role="button" href="https://riviera.rezgo.com/details/364100/hybridcity-bike-rental-non-electric" class="btn rezgo-btn-detail btn-lg btn-block" target="_parent"><span>More details</span></a>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-				</div><!-- // .row -->
-			</div><!-- // .rezgo-tour -->
-		</div><!-- // .rezgo-list-item -->
-		
-	
-</div>
-</section>
-		<div class="col-12" id="rezgo-list-content-footer"></div>
-		<div class="col-12" id="rezgo-list-content-more">
-			<button type="button" class="btn btn-default btn-lg btn-block" id="rezgo-index-more-button" data-rezgo-page="1">
-				<span><i class="fas fa-list" style="margin-right: 15px;"></i>Load more items </span>
-				<!-- <span> More Items &hellip;</span> -->
-			</button>
-		</div>
-		<div class="col-12" id="rezgo-list-content-bottom">&nbsp;</div>
-	</div><!-- // .rezgo-list-container -->
-</div><!-- // .rezgo-container -->
- 
-<div class="container-fluid">
-	<div id="rezgo-seal-refid-container">
-		 
-			</div>
-			<div style="float:right;height:auto;margin:10px;display:table;">
-			<div style="display:table-cell;vertical-align:bottom;">
-				<div style="font-size:24px;">
-					<a href="http://www.rezgo.com/features/online-booking/" title="Powering Tour and Activity Businesses Worldwide" style="color:#333;text-decoration:none;" target="_blank">
-						<span style="display:inline-block;width:65px;height:65px;text-indent:-9999px;margin-left:4px;background:url(assets/img/rezgo-logo.svg) no-repeat; background-size:contain;">Rezgo</span>
-					</a>
-				</div>
-			</div>
-		</div>
-</div>
-</div><div style="clear: both; display: block; height: 0px;"></div>
-    </div>
-    <!-- End: REZGO -->
-
-    <!-- Start: FOOTER -->
-    <footer>
-      <div class="container rezgo-default-wrapper">
-        <p class="rezgo-footer-brand"> <span class="rezgo-default-footer-copyright">&copy;</span> American Riviera Bike Tours and Rentals 2026 <span class="rezgo-default-footer-separator">&middot;</span><a href="terms.html">Terms &amp; Conditions</a></p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <div class="sh-top">
+      <div class="sh-in">
+        <a href="tel:+18056227766"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>805-622-7766</a>
+        <span class="sh-hours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>10 AM &ndash; 5 PM &middot; No rentals Tue &amp; Wed</span>
+        <a href="https://maps.app.goo.gl/pTpsfXGsAEcMBmE88" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>122 Gray Ave, Santa Barbara, CA 93101</a>
       </div>
-    </footer>
-    <!-- End: FOOTER -->
+    </div>
+    <div class="sh-main">
+      <div class="sh-in">
+        <a class="sh-logo" href="./" title="American Riviera Bike Tours and Rentals"><img src="assets/img/site/logo.png" alt="American Riviera Bike Tours and Rentals" width="768" height="209"></a>
+        <nav class="sh-nav" id="sh-nav" aria-label="Main">
+          <ul>
+            <li><a href="./" aria-current="page">Home</a></li>
+            <li><a href="our-story/">Our Story</a></li>
+            <li><a href="faq/">FAQ</a></li>
+            <li><a href="contact-us/">Contact Us</a></li>
+          </ul>
+        </nav>
+        <a class="sh-book" href="book.html">Book Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <button class="sh-toggle" type="button" aria-expanded="false" aria-controls="sh-nav" aria-label="Menu"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg></button>
+      </div>
+    </div>
+  </header>
 
-  <!-- Local vendor scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <main id="main" class="bk">
+<section class="bk-sec bk-hero">
+  <div class="bk-in">
+    <span class="bk-label">Santa Barbara's #1 Rated E-Bike Experience</span>
+    <h1>Explore the American Riviera by E-Bike</h1>
+    <p>Guided tours and rentals from the Funk Zone. Locally owned. 350+ five-star reviews. Lowest prices guaranteed.</p>
+    <div class="bk-btns">
+      <a class="bk-btn" href="book.html">Book a Guided Tour</a>
+      <a class="bk-btn sec lt" href="book.html">Rent an E-Bike</a>
+    </div>
+    <div class="bk-herotrust">Google <span class="bk-stars">★★★★★</span> 5.0 (390)  |  TripAdvisor <span class="bk-stars">★★★★★</span>  |  Yelp <span class="bk-stars">★★★★★</span></div>
+  </div>
+</section>
+
+<section id="reviews" class="bk-sec">
+  <div class="bk-in">
+    <div class="bk-center"><span class="bk-label">Reviews</span><h2>What Our Riders Say</h2></div>
+    <div style="margin-top:32px;">
+<link data-noptimize="1" data-no-optimize="1" data-no-minify="1" data-no-defer="1" rel="stylesheet" href="https://cdn.trustindex.io/assets/widget-presetted-css/v2/34-light-background.css" media="all"><pre class="ti-widget"><div style="opacity: 0; height: 0 !important; overflow: hidden !important" data-css-url="https://cdn.trustindex.io/assets/widget-presetted-css/v2/34-light-background.css" class=" ti-widget " data-layout-id="34" data-layout-category="slider" data-set-id="light-background" data-pid="5d4e08265b8a154469168bbc0b3" data-language="en" data-close-locale="Close" data-time-locale="%d %s ago|today|day|days|week|weeks|month|months|year|years" data-review-target-width="300" data-css-version="2" data-footer-link-domain="trustindex.io" data-review-text-mode="popup" data-reply-by-locale="Owner's reply" data-only-rating-locale="This user only left a rating." data-pager-autoplay-timeout="6" > <span class="ti-lightbox-data" hidden data-ti-json="%7B%22%40context%22%3A%22http%3A%2F%2Fschema.org%22%2C%22data%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLdYVpwJ47WMOpScbQMGihgl1w_9RI4jkGjg4wg6XpTcBshORaWIq7skx5yAzDGI0rV7wzeUl6tRxdN4amtfEV-SlWmIMzzfYgHQ5COQ6weijnoIsyUPlAl3BV1W6wxKybiPECbwqeamwOX7%3Dk-no%22%2C%22thumbnail%22%3A%22https%3A%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLdYVpwJ47WMOpScbQMGihgl1w_9RI4jkGjg4wg6XpTcBshORaWIq7skx5yAzDGI0rV7wzeUl6tRxdN4amtfEV-SlWmIMzzfYgHQ5COQ6weijnoIsyUPlAl3BV1W6wxKybiPECbwqeamwOX7%3Dk-no%22%2C%22index%22%3A0%2C%22r%22%3A%22f9e5df0bc9f85b89d596b0727121bcbe%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLeVYEuRj5lrnBhAQzHHqlTID79RHbuT4M2l-1AYF5S6jWbcjBEdDVizw6fhmlretAHxoDgoNKyCnyjBwOSp4zsqFgOzMPdMBhKAl5ra31vn-iSXbK17RldgGI23y23VlGFrmtoHv3rdLcv8%3Dk-no%22%2C%22thumbnail%22%3A%22https%3A%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FAABkmLeVYEuRj5lrnBhAQzHHqlTID79RHbuT4M2l-1AYF5S6jWbcjBEdDVizw6fhmlretAHxoDgoNKyCnyjBwOSp4zsqFgOzMPdMBhKAl5ra31vn-iSXbK17RldgGI23y23VlGFrmtoHv3rdLcv8%3Dk-no%22%2C%22index%22%3A0%2C%22r%22%3A%2254e0533e261d4c14e2a7392ba01ed887%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FACvplmMBLns8x7J_LKe8xyVugZWw66QKAhqhjBi6_ohdsNl891RGqZWh_eeIiGnZtuj4HTC6ulGQL1Y0AVMy2uCTULVxZ7Dc_GjeV320oS9caNS6dipnnDTxBNQZSsBjow-w2000XyCP4B0dI6_KSWm%3Dk-no%22%2C%22thumbnail%22%3A%22https%3A%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FACvplmMBLns8x7J_LKe8xyVugZWw66QKAhqhjBi6_ohdsNl891RGqZWh_eeIiGnZtuj4HTC6ulGQL1Y0AVMy2uCTULVxZ7Dc_GjeV320oS9caNS6dipnnDTxBNQZSsBjow-w80XyCP4B0dI6_KSWm%3Dk-no%22%2C%22index%22%3A0%2C%22r%22%3A%2212f3d19eb726ead3085f52cd340eefac%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FACvplmPnpU4-VRRCvr7w4slgE09wNiQ9KydUdScDGzyvA8VVLJ5aEpWcbMatflxW8XOt-k0t7T9iEeXTpCX6w_S0b7M40EWfOnFwmWdMU68EpuSWVaHEfFvdmSHFjjQ4Tdb7b5oNTsG4I83ofaqz%3Dk-no%22%2C%22thumbnail%22%3A%22https%3A%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FACvplmPnpU4-VRRCvr7w4slgE09wNiQ9KydUdScDGzyvA8VVLJ5aEpWcbMatflxW8XOt-k0t7T9iEeXTpCX6w_S0b7M40EWfOnFwmWdMU68EpuSWVaHEfFvdmSHFjjQ4Tdb7b5oNTsG4I83ofaqz%3Dk-no%22%2C%22index%22%3A1%2C%22r%22%3A%2212f3d19eb726ead3085f52cd340eefac%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FACvplmP7YP88c7RMyX5srOwNJK8I4lLswHE-Mb5MWv9RwdfAw3yt2LNVc1jfEk7wlIKuV-Bcti83yltebpi3E7Tl5iM_poKR-FbAKXlEyYBi9od7WN4RoVI1EgoBSREtGnd5rFT1QHGBwGMB2t0C%3Dk-no%22%2C%22thumbnail%22%3A%22https%3A%2F%2Flh3.googleusercontent.com%2Fgrass-cs%2FACvplmP7YP88c7RMyX5srOwNJK8I4lLswHE-Mb5MWv9RwdfAw3yt2LNVc1jfEk7wlIKuV-Bcti83yltebpi3E7Tl5iM_poKR-FbAKXlEyYBi9od7WN4RoVI1EgoBSREtGnd5rFT1QHGBwGMB2t0C%3Dk-no%22%2C%22index%22%3A2%2C%22r%22%3A%2212f3d19eb726ead3085f52cd340eefac%22%7D%5D%7D"></span> <div class="ti-widget-container ti-col-3"> <div class="ti-header ti-header-grid source-all"> <div class="ti-fade-container"> <div class="ti-rating-text"> <strong class="ti-rating ti-rating-large"> EXCELLENT </strong> </div> <span class="ti-stars star-lg"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /></span> <div class="ti-rating-text"> <span class="nowrap">Based on <strong><a href="https://www.trustindex.io/reviews/www.majestic-healingforwellness.com/lang/en" target="_blank" noopener>482 reviews</a></strong></span> </div> <div class="ti-large-logo"> <div class="ti-v-center"> <img loading="lazy" class="ti-logo-fb skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/logo.svg" loading="lazy" alt="Google" width="150" height="25" /> </div> </div> </div> <div class="ti-fade-container"> <div class="ti-rating-text"> <strong class="ti-rating ti-rating-large"> EXCELLENT </strong> </div> <span class="ti-stars star-lg"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Yelp/star/f.svg" alt="Yelp star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Yelp/star/f.svg" alt="Yelp star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Yelp/star/f.svg" alt="Yelp star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Yelp/star/f.svg" alt="Yelp star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Yelp/star/f.svg" alt="Yelp star 5" width="17" height="17" loading="lazy" /></span> <div class="ti-rating-text"> <span class="nowrap">Based on <strong><a href="https://www.trustindex.io/reviews/www.majestic-healingforwellness.com/lang/en" target="_blank" noopener>20 reviews</a></strong></span> </div> <div class="ti-large-logo"> <div class="ti-v-center"> <img loading="lazy" class="ti-logo-fb skip-lazy" src="https://cdn.trustindex.io/assets/platform/Yelp/logo.svg" loading="lazy" alt="Yelp" width="150" height="25" /> </div> </div> </div> </div> <div class="ti-reviews-container"> <div class="ti-controls"> <div class="ti-next" aria-label="Next review" role="button" tabindex="0"></div> <div class="ti-prev" aria-label="Previous review" role="button" tabindex="0"></div> </div> <div class="ti-reviews-container-wrapper"> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1791586459" data-id="a96bf278b6a42417c94b48b3e7b3ebd6" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocIIuYKR4GDKXzSX-9oQQJh-cgxAWwwlWN52NaDuHfJLSfgsAQ=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocIIuYKR4GDKXzSX-9oQQJh-cgxAWwwlWN52NaDuHfJLSfgsAQ=w80-h80-c-rp-mo-br100 2x" alt="Bryan Bisanz profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Bryan Bisanz </div> <div class="ti-date">1 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Mike was nice, helpful, and funny. It was faster and cheaper than other places. Mike is chill<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1791582815" data-id="468cf29bc0b79f5f714911416a45cad4" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocJU3xlERur7jgweDWOrudSxNxKGsIgzf9jusL9z1hmLsAcsAA=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocJU3xlERur7jgweDWOrudSxNxKGsIgzf9jusL9z1hmLsAcsAA=w80-h80-c-rp-mo-br100 2x" alt="Dusty Renner profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Dusty Renner </div> <div class="ti-date">1 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Great experience, Mine was so helpful and nice. Bikes worked great and had a full charge. Highly recommend<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1791569348" data-id="3f7531587a4f073743994e00c892fd2b" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocKvhGlW37c7X4Sr85TLaF38tSHR2jKJ1OjbexIu9v0dFMtobw=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocKvhGlW37c7X4Sr85TLaF38tSHR2jKJ1OjbexIu9v0dFMtobw=w80-h80-c-rp-mo-br100 2x" alt="Alan rasmussen profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Alan rasmussen </div> <div class="ti-date">1 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Totally made my Santa barber vacation Mike is awesome his bikes were on point loved the whole experience thanks Mike<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1791231579" data-id="78663d60eb23a3c34200eb2571a97c96" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjVrQZtOZUvTVnwEAaH5ocORaCOYV8LU2lrydy1ctePDuLqa-zFj=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjVrQZtOZUvTVnwEAaH5ocORaCOYV8LU2lrydy1ctePDuLqa-zFj=w80-h80-c-rp-mo-br100 2x" alt="Laura Doss profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Laura Doss </div> <div class="ti-date">5 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Really easy rental process, nice peeps and great bikes!  Thanks Mike on a bike!  We had a blast!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1791231542" data-id="f752d54f18fba999c0ea94c29065b759" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocIv6W-TmY264O631GOltPn0aTkvsdJ0nXhiLHVVMxVC-wDu=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocIv6W-TmY264O631GOltPn0aTkvsdJ0nXhiLHVVMxVC-wDu=w80-h80-c-rp-mo-br100 2x" alt="David Hertz profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> David Hertz </div> <div class="ti-date">5 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Very helpful and nice customer service<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1791220590" data-id="dcd190e52b50810cb4ac9399f1e3dc6b" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjVfbLRLpaq4fUU2kAhuLOx6u9zrWuRnEEgAa8sAcLaxbKdUOXso7w=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjVfbLRLpaq4fUU2kAhuLOx6u9zrWuRnEEgAa8sAcLaxbKdUOXso7w=w80-h80-c-rp-mo-br100 2x" alt="Courtney Spalding profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Courtney Spalding </div> <div class="ti-date">5 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->I rented a bike here for three days. Prices are the best around town. Mike in a Bike is knowledgeable, fast service, and very friendly! Highly recommended American Riviera Bike Rentals and Tours!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1791046082" data-id="bd55823e6ea616ef6f3590853768f259" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocKMPJ_3vw1cKD5YnqbY1L9bocBsVicwudxUN5cXARilAftMVEI=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocKMPJ_3vw1cKD5YnqbY1L9bocBsVicwudxUN5cXARilAftMVEI=w80-h80-c-rp-mo-br100 2x" alt="Wanda Charb profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Wanda Charb </div> <div class="ti-date">7 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->We chose this excursion to spend our one day off the cruise ship. We wanted to see as much variety of sights and places with a personal and dedicated tour guide. Mike delivers! We saw so much, and his knowledge and history shared at each of our stops was so interesting. The e-bikes were in fantastic condition and we were very pleased.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1790990654" data-id="b17ea9a8e21f6bab183cc904c454529c" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjUWVx4woFPa3q-gaGBKQE1yXBYm4He5AhdIlO_MHqdNmJyTeE4=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjUWVx4woFPa3q-gaGBKQE1yXBYm4He5AhdIlO_MHqdNmJyTeE4=w80-h80-c-rp-mo-br100 2x" alt="Jennifer Schaeffer profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Jennifer Schaeffer </div> <div class="ti-date">8 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->This was a phenomenal 2&amp;1/2 hour bike tour!!!  I would recommend this bike tour to everyone!!   I loved all the history, geography, and personal information that was shared!!!&#10;I have never been on an electric bike, and it was so much fun, I may buy one!!!!:)<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1790895832" data-id="f9e5df0bc9f85b89d596b0727121bcbe" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocKR-XRaNjIwT4ojSXMkTZbdFe4z4k6nzRORzhbIXCzEFVnpuQ=w40-h40-c-rp-mo-ba12-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocKR-XRaNjIwT4ojSXMkTZbdFe4z4k6nzRORzhbIXCzEFVnpuQ=w80-h80-c-rp-mo-ba12-br100 2x" alt="Claire Wilkinson Green profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Claire Wilkinson Green </div> <div class="ti-date">9 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><div class="ti-review-image" data-image-index="0"><img class="skip-lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLdYVpwJ47WMOpScbQMGihgl1w_9RI4jkGjg4wg6XpTcBshORaWIq7skx5yAzDGI0rV7wzeUl6tRxdN4amtfEV-SlWmIMzzfYgHQ5COQ6weijnoIsyUPlAl3BV1W6wxKybiPECbwqeamwOX7=k-no" loading="lazy" alt="" /><div class="ti-more-image-count">+0</div></div><!-- R-CONTENT -->Excellent friendly service. Great bikes &amp; good prices. We had an awsome day riding the beach trail.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1790788683" data-id="71a6668a8933ac693b6ebbfff9148e85" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocLk7NEHZEEYtCbmUl0TptAP0lN1KPr9cXpKNp7EaTcB4oxFsg=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocLk7NEHZEEYtCbmUl0TptAP0lN1KPr9cXpKNp7EaTcB4oxFsg=w80-h80-c-rp-mo-br100 2x" alt="Jerry Warren profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Jerry Warren </div> <div class="ti-date">10 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->We throughly enjoyed the tour.  Mike was engaging and fun.. yes, and his jokes too!  The route was beautiful, interesting and informative. The bikes were well maintained and worked perfectly.  We would definitely recommend his tours.  Next time we will do the taco tour!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1790780403" data-id="29ffef23ed574827bd44ed82d1bbffe1" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocIN37Mu8xIptYQTZzfinaNIKH03zkalx8tnakXa0rVan8nE_A=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocIN37Mu8xIptYQTZzfinaNIKH03zkalx8tnakXa0rVan8nE_A=w80-h80-c-rp-mo-br100 2x" alt="Doug Bowen profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Doug Bowen </div> <div class="ti-date">10 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->My wife and I went on a private tour this week. Approximately 2.5 hours and we covered a lot of ground. Mike is amazing -&gt; sharing details about different parts of the community throughout the ride. We also made a stop to get some ice cream, it was a great way to end the ride in the Funk Zone.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1790542811" data-id="54e0533e261d4c14e2a7392ba01ed887" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjURbeLRuIFb5ElBB9WAjb9kHXoDnTOz1t49TmJOat9qa67sGH_eoQ=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjURbeLRuIFb5ElBB9WAjb9kHXoDnTOz1t49TmJOat9qa67sGH_eoQ=w80-h80-c-rp-mo-br100 2x" alt="Ala Alsaedi profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Ala Alsaedi </div> <div class="ti-date">13 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><div class="ti-review-image" data-image-index="0"><img class="skip-lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLeVYEuRj5lrnBhAQzHHqlTID79RHbuT4M2l-1AYF5S6jWbcjBEdDVizw6fhmlretAHxoDgoNKyCnyjBwOSp4zsqFgOzMPdMBhKAl5ra31vn-iSXbK17RldgGI23y23VlGFrmtoHv3rdLcv8=k-no" loading="lazy" alt="" /><div class="ti-more-image-count">+0</div></div><!-- R-CONTENT -->So awesome. New bikes that ride smooth!!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1790539241" data-id="d07aed02a4372afa92828da88f2ad20e" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocJl6GMp-PD4_bFDLFgTkCFv10omnXDzqqdjPrCGTb-0sWRA6Q=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocJl6GMp-PD4_bFDLFgTkCFv10omnXDzqqdjPrCGTb-0sWRA6Q=w80-h80-c-rp-mo-br100 2x" alt="Jenny Casson profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Jenny Casson </div> <div class="ti-date">13 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Bike rental must do! Thank you for great bikes and amazing service :)<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1790537635" data-id="38565ab849054f6e3e9d120ffc90c128" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocITPMPYmmBWdkfBCvYlibaM1AEdOSIay1ryOFX8xLCPbaEdHw=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocITPMPYmmBWdkfBCvYlibaM1AEdOSIay1ryOFX8xLCPbaEdHw=w80-h80-c-rp-mo-br100 2x" alt="Eric Bonner profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Eric Bonner </div> <div class="ti-date">13 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->My wife and I recently went on a wonderful e-bike tour with Mike.  Mike did a great job, taking us to a number of different sites throughout the Santa Barbara area, providing a lot of history and local color along the way.  We had a lot of fun.  The bikes were in great shape.  Definitely would recommend Mike and American Riviera Bike Tours.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1790289929" data-id="194a639d9eb82c3aa30778e115568fb3" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjXg4uSBRmNrsEufbB9Lw6vFut3qXb62Q_RvFKUwsFW9yRfEoWdF3w=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjXg4uSBRmNrsEufbB9Lw6vFut3qXb62Q_RvFKUwsFW9yRfEoWdF3w=w80-h80-c-rp-mo-br100 2x" alt="Anne Ulmer profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Anne Ulmer </div> <div class="ti-date">16 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->This was a fantastic way to tour Santa Barbara. The company is very easy to work with and got us up and riding very quickly. Thank you!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1790286337" data-id="50d46e9f6de604ab79d65c73685ef3a8" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocIPllY9VDV3LsyhgMzaUpGTlr4mr8Ua34L6ITcDTsz47CuPgA=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocIPllY9VDV3LsyhgMzaUpGTlr4mr8Ua34L6ITcDTsz47CuPgA=w80-h80-c-rp-mo-br100 2x" alt="Curt Konrardy profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Curt Konrardy </div> <div class="ti-date">16 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Very friendly and reasonable prices<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1789863737" data-id="97cd8f8310bf04cc0960acdc9b2a8ebd" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocKkUyESQR-DDqgwcTs5iJ9mT-5HFiBs6aVKcaMYggvj2TH6-Q=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocKkUyESQR-DDqgwcTs5iJ9mT-5HFiBs6aVKcaMYggvj2TH6-Q=w80-h80-c-rp-mo-br100 2x" alt="Katie Ilten profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Katie Ilten </div> <div class="ti-date">21 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->The bikes were exceptional and the staff were very helpful showing us how to use the bikes and giving us tips for where to go, etc.  we would definitely rent again from this great place!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1789862880" data-id="ea981fddfe3919d87c4ec4d9dc6daf87" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjXDIQ84pfcOwUTEOpr5A6-hUxvv2_jmZyGF3RmamBUuvch4vdx7Hw=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjXDIQ84pfcOwUTEOpr5A6-hUxvv2_jmZyGF3RmamBUuvch4vdx7Hw=w80-h80-c-rp-mo-br100 2x" alt="Peter Ilten profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Peter Ilten </div> <div class="ti-date">21 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Bikes were PERFECT for SB and incredibly well maintained. Mike was a gracious host and provided great maps and advice for the area! Very flexible. Will do again when we visit!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1789804772" data-id="6d637f3ed6a267008f769401383c6dae" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocIUmxpg9oTdTb0vt8Rej9DzcoYyTr-1BZePWn7AI4TpWFfenQ=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocIUmxpg9oTdTb0vt8Rej9DzcoYyTr-1BZePWn7AI4TpWFfenQ=w80-h80-c-rp-mo-br100 2x" alt="Jenny F profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Jenny F </div> <div class="ti-date">22 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->★★★★★&#10;&#10;We rented two e-bikes from Mike, one with a seat for our kids, and had such a great experience! The bikes were in perfect condition, super easy to ride, and everything was really well organized. Being able to keep them overnight was an added bonus.&#10;&#10;Mike is incredibly friendly and welcoming. We especially love supporting a small business like this. Sending our warmest greetings from Germany — we would absolutely rent from Mike again! 🚲☀️<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1789775039" data-id="12f3d19eb726ead3085f52cd340eefac" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjV6gIDuIikA-E4SyZThrfwG2WPbWEUTkQZ9Af5J_5fM7Zz-A8w=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjV6gIDuIikA-E4SyZThrfwG2WPbWEUTkQZ9Af5J_5fM7Zz-A8w=w80-h80-c-rp-mo-br100 2x" alt="Edward Hamann profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Edward Hamann </div> <div class="ti-date">22 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><div class="ti-review-image ti-has-more-image" data-image-index="0"><img class="skip-lazy" src="https://lh3.googleusercontent.com/grass-cs/ACvplmMBLns8x7J_LKe8xyVugZWw66QKAhqhjBi6_ohdsNl891RGqZWh_eeIiGnZtuj4HTC6ulGQL1Y0AVMy2uCTULVxZ7Dc_GjeV320oS9caNS6dipnnDTxBNQZSsBjow-w80XyCP4B0dI6_KSWm=k-no" loading="lazy" alt="" /><div class="ti-more-image-count">+2</div></div><!-- R-CONTENT -->Fantastic tour.  Highly recommend.  Mike is very knowledgeable and very personable.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1789765143" data-id="b14b1e28d2e14ae39a307d0e420c2450" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocIgAyvr0IkQ5vMBPDD09ANG3wtC1ZQ68T_vOYjGYes1zCM3fA=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocIgAyvr0IkQ5vMBPDD09ANG3wtC1ZQ68T_vOYjGYes1zCM3fA=w80-h80-c-rp-mo-br100 2x" alt="Paul Balding profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Paul Balding </div> <div class="ti-date">22 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Best bike tour money can buy. Really good quality e bikes in brand new condition. Mike was fantastic and incredibly knowledgeable about all the best spots/views/history in the area. Free ice cream to top off the tour - cant beat it. Would recommend 11/10!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1789340940" data-id="ec941cafc5dc136f330e2ea0d1962000" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjVYgQUs5zBQivQOuLubSczlHE84vh7jd_BO7XQgghAa1HihXZI=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjVYgQUs5zBQivQOuLubSczlHE84vh7jd_BO7XQgghAa1HihXZI=w80-h80-c-rp-mo-br100 2x" alt="Pam Priester profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Pam Priester </div> <div class="ti-date">27 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Great equipment and super nice people. Perfect way to get around!!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1789259464" data-id="8563fe1b5fdad3750152fd7fa5b3e7dc" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocKmNVm8RHF-BGI3WhwRdoLd_F9pe-c3t3UV9I-GWzwZYDoa3A=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocKmNVm8RHF-BGI3WhwRdoLd_F9pe-c3t3UV9I-GWzwZYDoa3A=w80-h80-c-rp-mo-br100 2x" alt="Maggie Kiper profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Maggie Kiper </div> <div class="ti-date">28 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Very wonderful and easy process for renting bikes and a beautiful trail to ride on!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1789250959" data-id="ad997f1a6c3b7ce52aef224544943d7b" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjXTbMod6pFIMSqI9tU4cEbubJvh3ZAW0QAvp5uZ9Pqy5cb77Alo=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjXTbMod6pFIMSqI9tU4cEbubJvh3ZAW0QAvp5uZ9Pqy5cb77Alo=w80-h80-c-rp-mo-br100 2x" alt="Janel Kirby profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Janel Kirby </div> <div class="ti-date">28 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Excellent e-bike experience. Loved the map &amp; suggestions<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> <div class="ti-review-item source-Google ti-image-layout-thumbnail" data-platform-page-url="https://www.google.com/maps/search/?api=1&amp;query=Google&amp;query_place_id=ChIJBU_OtkoT6YARUUR2LW9a8Iw" data-time="1789096594" data-id="c44f45360ffe00434f3b3d9ba3c35589" data-language="en" data-rating="5.0" data-max-rating="5" > <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjXWUvZxthuICxy8vxhuXdXWn7Je3ME3bWNRQP6P1PvyiQP9Prps=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjXWUvZxthuICxy8vxhuXdXWn7Je3ME3bWNRQP6P1PvyiQP9Prps=w80-h80-c-rp-mo-br100 2x" alt="Brinley Sherwood profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Brinley Sherwood </div> <div class="ti-date">30 days ago</div> </div> </div> <span class="ti-stars"><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" class="ti-star f skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform ti-color-blue"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Amazing!! Easiest bike rental experience. We rented e bikes for a day and had the best time.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div> </div> <div class="ti-controls-line"> <div class="dot"></div> </div> </div> </div> </div> </pre><pre class="ti-hidden-markup" hidden style="display: none"><style class="scss-content">.ti-widget[data-layout-id='34'][data-set-id='light-background'][data-pid='5d4e08265b8a154469168bbc0b3'] .ti-widget-container .ti-date{color:#767676}.ti-widget[data-layout-id='34'][data-set-id='light-background'][data-pid='5d4e08265b8a154469168bbc0b3'] .ti-review-content{height:108.75px !important;-webkit-line-clamp:5}.ti-widget[data-layout-id='34'][data-set-id='light-background'][data-pid='5d4e08265b8a154469168bbc0b3'] .ti-ai-summary-item .ti-review-content{-webkit-line-clamp:6;height:132.5px !important}</style></pre><pre class="ti-hidden-markup" hidden style="display: none"><script>
+(function () { if (window.tiLoaderFallback) { return; } window.tiLoaderFallback = true; function tiLoadLoader() { if (window.TrustindexWidget || document.querySelector('script[src*="https://cdn.trustindex.io/loader.js"]')) { return; } let script = document.createElement("script"); script.async = true; script.src = "https://cdn.trustindex.io/loader.js"; script.setAttribute("data-ccm-injected", "1"); document.head.appendChild(script); } if ("loading" === document.readyState) { document.addEventListener("DOMContentLoaded", tiLoadLoader); } else { tiLoadLoader(); } })();
+</script>
+</pre>    </div>
+  </div>
+</section>
+
+<section class="bk-sec" style="background:var(--cr);">
+  <div class="bk-in bk-2col">
+    <div><img src="assets/img/site/mike-goleta-beach.jpg" alt="Mike, your local Santa Barbara e-bike guide" width="1200" height="873" loading="lazy"></div>
+    <div>
+      <span class="bk-label bk-guide-label">Your Local Guide</span>
+      <h2>Mike Knows Santa Barbara Like Nobody Else</h2>
+      <p>After years in the corporate world, Mike traded the corner office for a corner of the Funk Zone and two wheels. Now he spends every day doing what he loves most — sharing the hidden Santa Barbara that tourists never find on their own.</p>
+      <p>Every guided tour is private (just your group) and led personally by Mike. He'll take you past the Moreton Bay Fig Tree, through Butterfly Beach in Montecito, up to the Mission, and to his favorite local taco spots — all on premium e-bikes that make the hills feel flat.</p>
+      <p>This isn't a franchise. There's no call center. When you call <a href="tel:+18056227766">(805) 622-7766</a>, Mike picks up.</p>
+      <a class="bk-ghost" href="our-story/">Read Mike's Full Story →</a>
+    </div>
+  </div>
+</section>
+
+<section id="tours" class="bk-sec" style="padding-bottom:32px;">
+  <div class="bk-in">
+    <div class="bk-center"><span class="bk-label">Guided E-Bike Tours</span><h2>Our Guided Tours</h2><p style="max-width:760px;margin:0 auto 8px;">Our friendly tour guides are locals with deep knowledge and fun facts about Santa Barbara’s past and present.</p></div>
+    <div class="bk-grid2" style="margin-top:40px;">
+            <div class="bk-card">
+        <div class="bk-card-top" style="background:linear-gradient(rgba(26,43,74,.1),rgba(26,43,74,.1)),url('assets/img/site/tour-mission.jpg') center/cover;"></div>
+        <div class="bk-card-body">
+                    <h3>The Private Guided E-Bike Tour</h3>
+          <div class="bk-meta">2.5 Hours · Private (Just Your Group)</div>
+          <p>12 iconic stops including the Mission, Butterfly Beach, Stearns Wharf, and the largest fig tree in America. Your guide handles the route — you handle the memories.</p>
+          <div class="bk-meta">E-Bike · Helmet · Water · Local Guide</div>
+          <div class="bk-price">$90 <span style="font-size:15px;color:var(--gy);font-weight:400;">/ person</span></div>
+          <a class="bk-btn" href="https://riviera.rezgo.com/details/364051/private-guided-tour-of-santa-barbara-on-electric-bikes" target="_blank" rel="noopener">Book This Tour</a>
+        </div>
+      </div>
+            <div class="bk-card">
+        <div class="bk-card-top" style="background:linear-gradient(rgba(26,43,74,.1),rgba(26,43,74,.1)),url('assets/img/site/tacos.jpg') center/cover;"></div>
+        <div class="bk-card-body">
+          <span class="bk-badge">Only in Santa Barbara</span>          <h3>The Guided Taco Tour</h3>
+          <div class="bk-meta">1.5 Hours · Starts 12:30 PM</div>
+          <p>The only taco-by-bike tour in Santa Barbara. Ride to 3 of Mike's favorite taquerias. Includes a free beer or soda at one stop. Zero competition. 100% delicious.</p>
+          <div class="bk-meta">E-Bike · Helmet · Local Guide · Drink</div>
+          <div class="bk-price">$80 <span style="font-size:15px;color:var(--gy);font-weight:400;">/ person</span></div>
+          <a class="bk-btn" href="https://riviera.rezgo.com/details/403888/taco-tour" target="_blank" rel="noopener">Book This Tour</a>
+        </div>
+      </div>
+          </div>
+
+    <div style="max-width:680px;margin:48px auto 0;">
+      <h3>Your Guided Tour Includes</h3>
+      <ul class="bk-inc-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg><span>e-Bike</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1z"/><path d="M10 10V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5"/><path d="M4 15v-3a6 6 0 0 1 6-6"/><path d="M14 6a6 6 0 0 1 6 6v3"/></svg><span>Helmet</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg><span>Water</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg><span>Local, knowledgeable guide</span></li>      </ul>
+      <p style="margin-top:16px;"><strong>Tours begin at 10 AM and 2 PM</strong> at our Funk Zone location. Free cancellation with 24 hours notice.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bk-sec" style="padding-top:0;">
+  <div class="bk-in">
+    <div class="bk-center"><span class="bk-label">On the City Tour</span><h2>The Sights You’ll See</h2></div>
+    <div class="bk-sights-grid">
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/bird-refuge.jpg');"></div>
+        <div class="bk-sight-cap">Bird Refuge and ride by the Zoo</div>
+      </div>
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/butterfly-beach.jpg');"></div>
+        <div class="bk-sight-cap">Butterfly Beach and the town of Montecito</div>
+      </div>
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/cabrillo.jpg');"></div>
+        <div class="bk-sight-cap">Beach bike path along Cabrillo Boulevard</div>
+      </div>
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/dolphin-fountain.jpg');"></div>
+        <div class="bk-sight-cap">Stearns Wharf & Dolphin Fountain</div>
+      </div>
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/harbor-lookout.jpg');"></div>
+        <div class="bk-sight-cap">Harbor lookout</div>
+      </div>
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/fig-tree.jpg');"></div>
+        <div class="bk-sight-cap">Largest Fig Tree in the USA</div>
+      </div>
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/funk-zone.jpg');"></div>
+        <div class="bk-sight-cap">The “Funk Zone”</div>
+      </div>
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/state-street.jpg');"></div>
+        <div class="bk-sight-cap">Downtown State Street promenade</div>
+      </div>
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/courthouse.jpg');"></div>
+        <div class="bk-sight-cap">Courthouse with views from the clock tower</div>
+      </div>
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/downtown-parks.jpg');"></div>
+        <div class="bk-sight-cap">Downtown parks</div>
+      </div>
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/mission.jpg');"></div>
+        <div class="bk-sight-cap">Santa Barbara Mission</div>
+      </div>
+            <div class="bk-sight">
+        <div class="bk-sight-img" style="background-image:url('assets/img/site/sights/granada-theatre.jpg');"></div>
+        <div class="bk-sight-cap">Historic Arlington & Granada Theatres</div>
+      </div>
+          </div>
+  </div>
+</section>
+
+<section id="rentals" class="bk-sec" style="background:var(--cr);">
+  <div class="bk-in">
+    <div class="bk-center">
+      <span class="bk-label">E-Bike & Bike Rentals</span>
+      <h2>Bike Rental Pricing</h2>
+      <p>Hourly and daily rentals for both E-Bikes and regular bikes. <strong>Guaranteed lowest prices in town — or we’ll beat it by 10%.</strong></p>
+    </div>
+    <div style="max-width:680px;margin:40px auto 0;">
+      <table class="bk-rtable">
+        <thead><tr><th>Rental Duration</th><th>E-Bike</th><th>Regular Bike</th></tr></thead>
+        <tbody>
+                    <tr><td>1 Hour</td><td><b>$18</b></td><td>$9</td></tr>
+                    <tr><td>2 Hours</td><td><b>$35</b></td><td>$18</td></tr>
+                    <tr><td>3 Hours</td><td><b>$52</b></td><td>$23</td></tr>
+                    <tr><td>4 Hours</td><td><b>$65</b></td><td>$30</td></tr>
+                    <tr><td>All Day</td><td><b>$70</b></td><td>$33</td></tr>
+                    <tr><td>2 Days</td><td><b>$130</b></td><td>$44</td></tr>
+                    <tr><td>3 Days</td><td><b>$170</b></td><td>$55</td></tr>
+                    <tr><td>4 Days</td><td><b>$210</b></td><td>$65</td></tr>
+                    <tr><td>5 Days</td><td><b>$240</b></td><td>$75</td></tr>
+                    <tr><td>6 Days</td><td><b>$250</b></td><td>$85</td></tr>
+                    <tr><td>7 Days</td><td><b>$260</b></td><td>$95</td></tr>
+                    <tr><td>More than 7 Days</td><td><b>Call for pricing</b></td><td>—</td></tr>
+                  </tbody>
+      </table>
+      <p style="font-size:13px;color:var(--gy);margin-top:14px;text-align:center;">* Price guarantee is for advertised similar bike type (e.g. ebike cruiser) and durations we offer, in Santa Barbara city limits.</p>
+    </div>
+
+    <div class="bk-center" id="fleet" style="margin:48px 0 24px;"><span class="bk-label">Our Bikes</span><h3 style="font-size:22px;">Our Full Fleet — Reserve Any Ride</h3></div>
+    <div class="bk-grid3">
+            <div class="bk-card" id="cruiser-e-bike">
+        <div class="bk-card-top bk-fleet-top" style="background:#fff url('assets/img/tours/cruiser-ebike-rental.jpg') center/contain no-repeat;"></div>
+        <div class="bk-card-body">
+          <h3 style="font-size:20px;">Cruiser e-Bike</h3>
+          <div class="bk-meta">From $18/hr · $70/day</div>
+          <a class="bk-btn" style="margin-top:14px;" href="https://riviera.rezgo.com/details/364054/cruiser-e-bike-rental" target="_blank" rel="noopener">Reserve</a>
+        </div>
+      </div>
+            <div class="bk-card" id="low-step-cruiser-e-bike">
+        <div class="bk-card-top bk-fleet-top" style="background:#fff url('assets/img/tours/low-step-cruiser-ebike-rental.jpg') center/contain no-repeat;"></div>
+        <div class="bk-card-body">
+          <h3 style="font-size:20px;">Low-Step Cruiser e-Bike</h3>
+          <div class="bk-meta">From $18/hr · $70/day</div>
+          <a class="bk-btn" style="margin-top:14px;" href="https://riviera.rezgo.com/details/364604/low-step-cruiser-e-bike-rental" target="_blank" rel="noopener">Reserve</a>
+        </div>
+      </div>
+            <div class="bk-card" id="low-step-e-bike">
+        <div class="bk-card-top bk-fleet-top" style="background:#fff url('assets/img/tours/low-step-ebike-rental.jpg') center/contain no-repeat;"></div>
+        <div class="bk-card-body">
+          <h3 style="font-size:20px;">Low-Step e-Bike</h3>
+          <div class="bk-meta">From $18/hr · $70/day</div>
+          <a class="bk-btn" style="margin-top:14px;" href="https://riviera.rezgo.com/details/405838/low-step-e-bike-rental" target="_blank" rel="noopener">Reserve</a>
+        </div>
+      </div>
+            <div class="bk-card" id="cargo-e-bike">
+        <div class="bk-card-top bk-fleet-top" style="background:#fff url('assets/img/tours/cargo-ebike-rental.jpg') center/contain no-repeat;"></div>
+        <div class="bk-card-body">
+          <h3 style="font-size:20px;">Cargo e-Bike to Carry Kids</h3>
+          <div class="bk-meta">From $18/hr · $70/day</div>
+          <a class="bk-btn" style="margin-top:14px;" href="https://riviera.rezgo.com/details/364116/cargo-e-bike-rental" target="_blank" rel="noopener">Reserve</a>
+        </div>
+      </div>
+            <div class="bk-card" id="electric-scooter">
+        <div class="bk-card-top bk-fleet-top" style="background:#fff url('assets/img/tours/electric-scooter-rental.jpg') center/contain no-repeat;"></div>
+        <div class="bk-card-body">
+          <h3 style="font-size:20px;">Electric Scooter</h3>
+          <div class="bk-meta">See pricing</div>
+          <a class="bk-btn" style="margin-top:14px;" href="https://riviera.rezgo.com/details/410020/electric-scooter-rental" target="_blank" rel="noopener">Reserve</a>
+        </div>
+      </div>
+            <div class="bk-card" id="city-bike">
+        <div class="bk-card-top bk-fleet-top" style="background:#fff url('assets/img/tours/city-bike-rental-3-speed.jpg') center/contain no-repeat;"></div>
+        <div class="bk-card-body">
+          <h3 style="font-size:20px;">City Bike (3-Speed)</h3>
+          <div class="bk-meta">From $9/hr · $33/day</div>
+          <a class="bk-btn" style="margin-top:14px;" href="https://riviera.rezgo.com/details/408925/city-bike-rental-3-speed-non-electric" target="_blank" rel="noopener">Reserve</a>
+        </div>
+      </div>
+            <div class="bk-card" id="cruiser">
+        <div class="bk-card-top bk-fleet-top" style="background:#fff url('assets/img/tours/cruiser-rental-non-electric.jpg') center/contain no-repeat;"></div>
+        <div class="bk-card-body">
+          <h3 style="font-size:20px;">Cruiser (Non-Electric)</h3>
+          <div class="bk-meta">From $9/hr · $33/day</div>
+          <a class="bk-btn" style="margin-top:14px;" href="https://riviera.rezgo.com/details/364122/cruiser-rental-non-electric" target="_blank" rel="noopener">Reserve</a>
+        </div>
+      </div>
+            <div class="bk-card" id="hybrid-bike">
+        <div class="bk-card-top bk-fleet-top" style="background:#fff url('assets/img/tours/hybrid-city-bike-rental-non-electric.jpg') center/contain no-repeat;"></div>
+        <div class="bk-card-body">
+          <h3 style="font-size:20px;">Hybrid / City (Non-Electric)</h3>
+          <div class="bk-meta">From $9/hr · $33/day</div>
+          <a class="bk-btn" style="margin-top:14px;" href="https://riviera.rezgo.com/details/364100/hybridcity-bike-rental-non-electric" target="_blank" rel="noopener">Reserve</a>
+        </div>
+      </div>
+          </div>
+    <div class="bk-center" style="margin-top:36px;"><a class="bk-btn" href="book.html">See All Rentals & Book</a></div>
+  </div>
+</section>
+
+<section class="bk-sec bk-route">
+  <div class="bk-in">
+    <span class="bk-label">Free Route Guide</span>
+    <h2>Don't Want a Guide? Ride Solo.</h2>
+    <p>Download our recommended 12-mile self-guided route through Santa Barbara's most stunning coastal and historic landmarks. Starts right from our Funk Zone shop.</p>
+    <a class="bk-btn sec lt" href="https://biketoursofsb.com/ways-to-tour-santa-barbra-on-bike/">View Self-Guided Route</a>
+  </div>
+</section>
+
+<section id="faq" class="bk-sec">
+  <div class="bk-in" style="max-width:820px;">
+    <div class="bk-center"><h2>Frequently Asked Questions</h2></div>
+    <div style="margin-top:24px;">
+            <details class="bk-faq"><summary>Do I need biking experience to ride an e-bike in Santa Barbara?</summary><div class="bk-a">Not at all. If you can ride a regular bike, you can ride an e-bike. The pedal-assist makes hills feel flat, and we give every rider a short orientation before any tour or rental, so first-timers feel confident within minutes of rolling out.</div></details>
+            <details class="bk-faq"><summary>Do I need a license to ride an e-bike in California?</summary><div class="bk-a">No. California requires no license, registration, or insurance for Class 1 e-bikes like ours. If you can ride a regular bike, you can ride one of ours. We give every rider a quick orientation before heading out, so beginners feel comfortable right away.</div></details>
+            <details class="bk-faq"><summary>How old do you have to be to rent an e-bike?</summary><div class="bk-a">Kids ride free in the seat of our cargo e-bike, so families can tour together. For solo riders we&#039;ll fit you properly and make sure you&#039;re comfortable before heading out. Call us at (805) 622-7766 with any questions about younger riders or group bookings.</div></details>
+            <details class="bk-faq"><summary>Can I bring my kids? Do you have child seats or cargo bikes?</summary><div class="bk-a">Yes. Our Aventon Abound cargo e-bike carries two kids or one small adult on the back, so the whole family rides together. We also stock low-step and smaller-frame bikes for shorter riders, and helmets are included free for every rider, kids included.</div></details>
+            <details class="bk-faq"><summary>How fast do the e-bikes go?</summary><div class="bk-a">Our e-bikes are Class 1, so the pedal-assist helps you up to 20 mph and then eases off — smooth, comfortable power with no throttle. That keeps them legal on Santa Barbara&#039;s bike paths and easy for beginners, while still making hills and headwinds effortless.</div></details>
+            <details class="bk-faq"><summary>How far can I go on one e-bike charge?</summary><div class="bk-a">Our e-bikes comfortably cover 25 to 40+ miles on a single charge, depending on terrain and how much pedal-assist you use. That&#039;s far more than a typical day exploring Santa Barbara — from the Funk Zone to Butterfly Beach, the Mission, and back with charge to spare.</div></details>
+            <details class="bk-faq"><summary>How much does it cost to rent an e-bike in Santa Barbara?</summary><div class="bk-a">E-bike rentals start at $18 per hour or $70 for a full day; regular bikes are $9 per hour or $33 a day, and multi-day rates lower the daily price. Every rental includes a helmet, lock, water, and map — and we guarantee the lowest price in town.</div></details>
+            <details class="bk-faq"><summary>What is the cheapest e-bike rental in Santa Barbara?</summary><div class="bk-a">We offer the lowest e-bike rental prices in Santa Barbara, starting at $18 per hour and $70 for a full day. As a locally owned shop with no franchise overhead, we guarantee it: find a lower advertised price for a similar bike and we&#039;ll beat it by 10%.</div></details>
+            <details class="bk-faq"><summary>Do I need to reserve ahead, or can I walk in?</summary><div class="bk-a">Walk-ins are welcome when bikes are available, but reserving ahead guarantees your bike and tour time, especially on weekends and holidays. Book online anytime or call Mike at (805) 622-7766. Cancellation is free with 24 hours&#039; notice, so there&#039;s no risk in booking early.</div></details>
+            <details class="bk-faq"><summary>How long is the guided city bike tour and what will I see?</summary><div class="bk-a">The Private Guided City Tour runs about 2.5 hours at a relaxed pace and visits roughly a dozen top sights — the Santa Barbara Mission, Butterfly Beach, Stearns Wharf, the courthouse, and the largest fig tree in America. It&#039;s private to your group and led personally by Mike.</div></details>
+            <details class="bk-faq"><summary>Where does the Santa Barbara taco bike tour go?</summary><div class="bk-a">Our Guided Taco Tour is the only taco-by-bike tour in Santa Barbara. Over 1.5 hours you&#039;ll ride e-bikes to three of Mike&#039;s favorite local taquerias, sampling tacos at each stop, with a free beer, wine, or soda included. It departs at 12:30 PM from the Funk Zone.</div></details>
+            <details class="bk-faq"><summary>Are e-bikes allowed on the Cabrillo Bike Path?</summary><div class="bk-a">Yes. Class 1 e-bikes like ours are permitted on the Cabrillo Bike Path, the scenic oceanfront route that starts just minutes from our Funk Zone shop. It&#039;s the easiest, most beautiful way to ride the waterfront past the harbor, Stearns Wharf, and East Beach.</div></details>
+            <details class="bk-faq"><summary>Where can I rent an e-bike near Stearns Wharf?</summary><div class="bk-a">We&#039;re a 3-minute walk from Stearns Wharf at 122 Gray Ave in the Funk Zone — the closest premium e-bike rentals to the waterfront. Walk up State Street two blocks, turn right on Yanonali, then right on Gray Avenue. Free public parking is nearby.</div></details>
+            <details class="bk-faq"><summary>Is there parking near your shop in the Funk Zone?</summary><div class="bk-a">Yes. Free public parking is available within a short walk of our location at 122 Gray Ave. From Stearns Wharf, head up State Street two blocks, turn right on Yanonali Street, then right on Gray Avenue — about a three-minute walk to our door.</div></details>
+            <details class="bk-faq"><summary>What is the best self-guided bike route in Santa Barbara?</summary><div class="bk-a">Our free 12-mile self-guided route loops the coastline, the Bird Refuge, Butterfly Beach, and historic landmarks, starting right from our Funk Zone shop. Ask in-store for the map or download it from our route guide. Most riders finish comfortably in a half-day on an e-bike.</div></details>
+            <details class="bk-faq"><summary>What is the best way to see Santa Barbara in one day?</summary><div class="bk-a">By e-bike. In a single day you can ride the Cabrillo waterfront path, stop at Stearns Wharf and the harbor, cruise to Butterfly Beach in Montecito, then loop up to the Mission and downtown State Street — covering far more ground than walking, with no parking hassle.</div></details>
+          </div>
+  </div>
+</section>
+
+<section id="location" class="bk-sec bk-loc" style="background:var(--cr);">
+  <div class="bk-in bk-2col">
+    <div>
+      <h2>Find Us in the Funk Zone</h2>
+      <address>
+        <strong>American Riviera Bike Tours and Rentals</strong><br>
+        122 Gray Ave, Santa Barbara, CA 93101<br><br>
+        Hours: 10 AM – 5 PM (No rentals Tuesday & Wednesday)<br>
+        Phone: <a href="tel:+18056227766">(805) 622-7766</a>
+      </address>
+      <p style="margin-top:20px;"><strong>Directions from Stearns Wharf:</strong> Walk up State Street 2 blocks, right on Yanonali Street, right on Gray Avenue. 3-minute walk. Free public parking nearby.</p>
+    </div>
+    <div>
+      <iframe title="American Riviera Bike Tours location map" src="https://www.google.com/maps?q=122%20Gray%20Ave%2C%20Santa%20Barbara%2C%20CA%2093101&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="bk-sec bk-dark bk-center bk-cta">
+  <div class="bk-in">
+    <h2>Ready to Explore Santa Barbara?</h2>
+    <p>Book a guided tour or rent an e-bike. Free cancellation with 24 hours notice.</p>
+    <p class="bk-guarantee">Guaranteed lowest prices* in town – or we’ll beat it by 10%!!</p>
+    <div class="bk-btns" style="justify-content:center;">
+      <a class="bk-btn" href="book.html">Book a Tour</a>
+      <a class="bk-btn sec lt" href="book.html">Rent a Bike</a>
+    </div>
+    <p style="margin-top:20px;">Or call Mike directly: <a href="tel:+18056227766">(805) 622-7766</a></p>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="sf-in">
+      <div class="sf-about">
+        <img class="sf-logo" src="assets/img/site/logo.png" alt="American Riviera Bike Tours and Rentals" width="768" height="209" loading="lazy">
+        <p>American Riviera Bike Tours and Rentals provides tours of Santa Barbara led by locals with rich knowledge and history of the area.</p>
+        <a class="sf-seal" href="https://www.bbb.org/us/ca/santa-barbara/profile/bike-rental/american-riviera-bike-tours-and-rentals-1236-92088089/#sealclick" target="_blank" rel="nofollow noopener"><img src="https://seal-santabarbara.bbb.org/seals/blue-seal-200-65-bbb-92088089.png" alt="American Riviera Bike Tours and Rentals BBB Business Review" width="200" height="65" loading="lazy"></a>
+      </div>
+      <div>
+        <h2>About Us</h2>
+        <ul>
+          <li><a href="our-story/">Our Story</a></li>
+          <li><a href="faq/">FAQ</a></li>
+          <li><a href="contact-us/">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Our Bikes</h2>
+        <ul>
+          <li><a href="./#fleet">e-Bikes</a></li>
+          <li><a href="./#cruiser">Regular Cruiser</a></li>
+          <li><a href="./#city-bike">Regular City Bike</a></li>
+          <li><a href="./#cargo-e-bike">e-Cargo Bike</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Resources</h2>
+        <ul>
+          <li><a href="https://biketoursofsb.com/choosing-a-bike-for-your-bike-tour-of-santa-barbara/">Choosing a Bike</a></li>
+          <li><a href="https://biketoursofsb.com/how-to-get-the-most-out-of-your-bike-tour-of-santa-barbara/">Getting the Most Out of Your Tour</a></li>
+          <li><a href="https://biketoursofsb.com/ways-to-tour-santa-barbra-on-bike/">Ways to Tour Santa Barbara</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sf-bottom">
+      <span>&copy; 2026 American Riviera Bike Tours and Rentals</span>
+      <span><a href="book.html">Book Online</a> &nbsp;&middot;&nbsp; <a href="terms.html">Booking Terms</a></span>
+    </div>
+  </footer>
+
+  <div id="bk-mobile-bar" aria-label="Quick actions">
+    <a class="bk-bar-btn bk-bar-call" href="tel:+18056227766">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call Mike</span>
+    </a>
+    <a class="bk-bar-btn bk-bar-book" href="book.html"><span>Book Now</span></a>
+  </div>
+
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>

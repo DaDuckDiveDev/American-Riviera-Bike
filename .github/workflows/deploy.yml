@@ -79,22 +79,39 @@ jobs:
 
       - name: Upload the site
         run: |
-          sftp -i ~/.ssh/deploy_key -P "$SFTP_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -b - "$SFTP_USER@$SFTP_HOST" <<EOF
-          cd $REMOTE_DIR
-          put index.html
-          put terms.html
-          -mkdir assets
-          put -r assets
-          ls -l
-          EOF
+          # Everything at the top level of the repo is the site, except the README.
+          # Dot-folders (.git, .github) are skipped by the glob.
+          {
+            echo "cd $REMOTE_DIR"
+            for item in *; do
+              case "$item" in README.md) continue ;; esac
+              if [ -d "$item" ]; then
+                echo "-mkdir $item"
+                echo "put -r $item"
+              else
+                echo "put $item"
+              fi
+            done
+            echo "ls -l"
+          } > "$RUNNER_TEMP/sftp-batch.txt"
+          cat "$RUNNER_TEMP/sftp-batch.txt"
+          sftp -i ~/.ssh/deploy_key -P "$SFTP_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -b "$RUNNER_TEMP/sftp-batch.txt" "$SFTP_USER@$SFTP_HOST"
 
       - name: Check the live site
         run: |
           sleep 5
-          if curl -fsSL --max-time 30 "https://$SITE/?deploy=$GITHUB_SHA" | grep -qi "American Riviera"; then
-            echo "::notice::https://$SITE/ is serving the new site"
+          failed=""
+          for path in "" our-story/ faq/ contact-us/ book.html terms.html assets/css/site.css assets/img/site/logo.png; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 "https://$SITE/$path?deploy=$GITHUB_SHA" || true)
+            echo "$code /$path"
+            [ "$code" = "200" ] || failed="$failed /$path($code)"
+          done
+          if [ -n "$failed" ]; then
+            echo "::warning::Uploaded, but these did not return 200:$failed"
+          elif curl -fsSL --max-time 30 "https://$SITE/?deploy=$GITHUB_SHA" | grep -q "Explore the American Riviera by E-Bike"; then
+            echo "::notice::https://$SITE/ is serving the home page and all pages return 200"
           else
-            echo "::warning::Files uploaded, but https://$SITE/ is not showing the new page yet (cache, or a placeholder page taking priority)"
+            echo "::warning::Files uploaded, but https://$SITE/ is not showing the new home page yet (cache)"
           fi
 
       - name: Remove the key
