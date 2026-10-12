@@ -1,0 +1,102 @@
+name: Deploy to SiteGround
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: [README.md]
+  workflow_dispatch:
+
+env:
+  SITE: johnw858.sg-host.com
+  SFTP_HOST: sftp.siteground.net
+  SFTP_PORT: "18765"
+  SFTP_USER: sftp6234-d725e521
+  HOST_FINGERPRINT: SHA256:PvEri3iYKZeVBGSPE54fg2bDTfYxGpHqnRc+nOZMj/Q
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare SSH key and verify the server
+        env:
+          SFTP_KEY: ${{ secrets.SFTP_KEY }}
+          SFTP_KEY_PASSPHRASE: ${{ secrets.SFTP_KEY_PASSPHRASE }}
+        run: |
+          if [ -z "$SFTP_KEY" ]; then
+            echo "::error::The SFTP_KEY secret is not set in this repository"
+            exit 1
+          fi
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$SFTP_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          if [ -n "$SFTP_KEY_PASSPHRASE" ]; then
+            if ! ssh-keygen -p -P "$SFTP_KEY_PASSPHRASE" -N "" -f ~/.ssh/deploy_key > /dev/null 2>&1; then
+              echo "::error::SFTP_KEY_PASSPHRASE does not unlock SFTP_KEY (wrong passphrase, or the key was pasted incompletely)"
+              exit 1
+            fi
+          elif ! ssh-keygen -y -P "" -f ~/.ssh/deploy_key > /dev/null 2>&1; then
+            echo "::error::SFTP_KEY needs a passphrase but the SFTP_KEY_PASSPHRASE secret is not set (or the key was pasted incompletely)"
+            exit 1
+          fi
+          ssh-keyscan -t ed25519 -p "$SFTP_PORT" "$SFTP_HOST" > ~/.ssh/known_hosts 2> /dev/null
+          if ! ssh-keygen -lf ~/.ssh/known_hosts | grep -qF "$HOST_FINGERPRINT"; then
+            echo "::error::Server fingerprint does not match the expected one"
+            ssh-keygen -lf ~/.ssh/known_hosts
+            exit 1
+          fi
+
+      - name: Log in and find the site folder
+        run: |
+          run_sftp() {
+            sftp -i ~/.ssh/deploy_key -P "$SFTP_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -b - "$SFTP_USER@$SFTP_HOST"
+          }
+          if ! out=$(echo "pwd" | run_sftp 2>&1); then
+            reason=$(printf '%s\n' "$out" | grep -v '^sftp>' | tail -n 1 || true)
+            echo "::error::SFTP login failed for $SFTP_USER: $reason"
+            exit 1
+          fi
+          REMOTE_DIR=""
+          for d in "/$SITE/$SITE/public_html" "/$SITE/public_html" "/public_html"; do
+            if echo "cd $d" | run_sftp > /dev/null 2>&1; then
+              REMOTE_DIR="$d"
+              break
+            fi
+          done
+          if [ -z "$REMOTE_DIR" ]; then
+            count=$(echo "ls -1 /" | run_sftp 2> /dev/null | grep -vc '^sftp>' || true)
+            echo "::error::Logged in, but this SFTP key has no folder for $SITE ($count folders visible at the top level). The key probably does not cover this site."
+            exit 1
+          fi
+          echo "REMOTE_DIR=$REMOTE_DIR" >> "$GITHUB_ENV"
+          before=$(echo "ls -1 $REMOTE_DIR" | run_sftp 2> /dev/null | grep -v '^sftp>' | xargs -r -n1 basename 2> /dev/null | tr '\n' ' ' || true)
+          echo "::notice::Uploading to $REMOTE_DIR (there before: ${before:-nothing})"
+
+      - name: Upload the site
+        run: |
+          sftp -i ~/.ssh/deploy_key -P "$SFTP_PORT" -o BatchMode=yes -o IdentitiesOnly=yes -b - "$SFTP_USER@$SFTP_HOST" <<EOF
+          cd $REMOTE_DIR
+          put index.html
+          put terms.html
+          -mkdir assets
+          put -r assets
+          ls -l
+          EOF
+
+      - name: Check the live site
+        run: |
+          sleep 5
+          if curl -fsSL --max-time 30 "https://$SITE/?deploy=$GITHUB_SHA" | grep -qi "American Riviera"; then
+            echo "::notice::https://$SITE/ is serving the new site"
+          else
+            echo "::warning::Files uploaded, but https://$SITE/ is not showing the new page yet (cache, or a placeholder page taking priority)"
+          fi
+
+      - name: Remove the key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
